@@ -8,6 +8,10 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     </script>
     <title>POSTULACION PUBLICO</title>
     <style>
@@ -54,7 +58,7 @@
         <h4>1.1 Nombre de Proyecto</h4><input type="text" class="form-control"><br>
         <h4>1.2 Nombre entidad de postulante</h4><input type="text" class="form-control"><br>
         <h4>1.3 Coordinador Responsable del Proyecto</h4>
-        <h6 class="alert alert-secondary">(Es quien está a cargo de la administración y será el responsable de la
+        <h6 class="alert alert-secondary col-md-8">(Es quien está a cargo de la administración y será el responsable de la
           calidad de ejecución y del fiel cumplimiento de los compromisos contraídos en él.) </h6>
         <table>
           <tbody>
@@ -127,20 +131,20 @@
           
             <h4 class="ctitulo2 rounded-lg">2 - Antecedentes de la Iniciativa</h4>
             <h4>2.1 Prioridad Regional que Abordará la Iniciativa</h4>
-            <h6 class="alert alert-secondary">Sólo se podrá marcar una casilla. <br>Indicar la que tenga mayor
+            <h6 class="alert alert-secondary col-md-4">Sólo se podrá marcar una casilla. <br>Indicar la que tenga mayor
               relevancia con la iniciativa propuesta.</h6>
             <h1>TABLA</h1>
             <h4>2.2 Destino del Proyecto</h4>
             <H1>TABLA</H1>
             <h4>2.3 Duración y Sede de la Iniciativa</h4>
-            <h6 class="alert alert-secondary">Duración Total (en meses, máximo 36 meses):</h6><input type="text"
+            <h6 class="alert alert-secondary col-md-3">Duración Total (en meses, máximo 36 meses):</h6><input type="text"
               class="form-control col-md-1" maxlength="2"><br>
             <h4>Lugar o Lugares de Ejecución de la Iniciativa</h4>
-            <h6 class="alert alert-secondary">(Comunas y localidades de la Región de O'Higgins donde se ejecutarán las
+            <h6 class="alert alert-secondary col-md-5">(Comunas y localidades de la Región de O'Higgins donde se ejecutarán las
               actividades) </h6>
             <input type="text" class="form-control col-md-4"><br>
             <h4>2.4 Presupuesto</h4>
-            <h6 class="alert alert-secondary"> Ingrese el monto a financiar por el FIC para cada subítem (no puede
+            <h6 class="alert alert-secondary col-md-5"> Ingrese el monto a financiar por el FIC para cada subítem (no puede
               superar los $200.000.000).</h6>
               
             <h1>TABLA</h1>
@@ -149,7 +153,7 @@
             <!-- ITEM 3 -->
               
                 <h4 class="ctitulo2 rounded-lg">3 - Estado del Arte</h4>
-                <h6 class="alert alert-secondary"> (Indicar qué existe en Chile y en el extranjero relacionado con la
+                <h6 class="alert alert-secondary col-md-7"> (Indicar qué existe en Chile y en el extranjero relacionado con la
                   innovación propuesta, incluyendo información cualitativa y cuantitativa, citando las fuentes
                   utilizadas (máximo 10.000 caracteres).</h6> <textarea rows="30" name="estado" cols="123"
                   maxlength="10000" style=" resize:none;" placeholder="Máximo 10.000 caracteres" required=""></textarea>
