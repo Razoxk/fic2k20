@@ -49,7 +49,7 @@
     </table>
     <hr align="center" width="75%" noshade="noshade">
     <!-- ITEM 1 -->
-      <div class="container">
+      <div class="container-fluid">
         <h4 class="ctitulo2 rounded-lg">1 - Antecedentes Generales</h4>
         <h4>1.1 Nombre de Proyecto</h4><input type="text" class="form-control"><br>
         <h4>1.2 Nombre entidad de postulante</h4><input type="text" class="form-control"><br>
@@ -59,31 +59,31 @@
         <table>
           <tbody>
             <tr>
-              <td>Rut</td>
+              <td class="border border-white" style="background: #E2E3E5;">Rut</td>
               <td><input type="text" class="form-control"></td>
             </tr>
             <tr>
-              <td>Nombre Completo</td>
+              <td class="border border-white" style="background: #E2E3E5;">Nombre Completo</td>
               <td><input type="text" class="form-control"></td>
             </tr>
             <tr>
-              <td>Cargo Institucion</td>
+              <td class="border border-white" style="background: #E2E3E5;">Cargo Institucion</td>
               <td><input type="text" class="form-control"></td>
             </tr>
             <tr>
-              <td>Numero de telefono +56</td>
+              <td class="border border-white" style="background: #E2E3E5;">Numero de telefono +56</td>
               <td><input type="text" class="form-control"></td>
             </tr>
             <tr>
-            <td>Numero de celular &nbsp;&nbsp;&nbsp;+56</td>
+            <td class="border border-white" style="background: #E2E3E5;">Numero de celular &nbsp;&nbsp;&nbsp;+56</td>
               <td><input type="text" class="form-control"></td>
             </tr>
             <tr>
-              <td>Email</td>
+              <td class="border border-white" style="background: #E2E3E5;">Email</td>
               <td><input type="text" class="form-control"></td>
             </tr>
             <tr>
-              <td>Direccion</td>
+              <td class="border border-white" style="background: #E2E3E5;">Direccion</td>
               <td><input type="text" class="form-control"></td>
             </tr>
           </tbody>
@@ -92,39 +92,39 @@
         <table>
           <tbody>
             <tr>
-              <td>Rut</td>
+              <td class="border border-white" style="background: #E2E3E5;">Rut</td>
               <td><input type="text" class="form-control"></td>
             </tr>
             <tr>
-              <td>Nombre Completo</td>
+              <td class="border border-white" style="background: #E2E3E5;">Nombre Completo</td>
               <td><input type="text" class="form-control"></td>
             </tr>
             <tr>
-              <td>Cargo Institucion</td>
+              <td class="border border-white" style="background: #E2E3E5;">Cargo Institucion</td>
               <td><input type="text" class="form-control"></td>
             </tr>
             <tr>
-              <td>Numero de telefono&nbsp;+56</td>
+              <td class="border border-white" style="background: #E2E3E5;">Numero de telefono&nbsp;+56</td>
               <td><input type="text" class="form-control"></td>
             </tr>
             <tr>
-              <td>Numero de celular &nbsp;&nbsp;&nbsp;+56</td>
+              <td class="border border-white" style="background: #E2E3E5;">Numero de celular &nbsp;&nbsp;&nbsp;+56</td>
               <td><input type="text" class="form-control"></td>
             </tr>
             <tr>
-              <td>Email</td>
+              <td class="border border-white" style="background: #E2E3E5;">Email</td>
               <td><input type="text" class="form-control"></td>
             </tr>
             <tr>
-              <td>Direccion</td>
+              <td class="border border-white" style="background: #E2E3E5;">Direccion</td>
               <td><input type="text" class="form-control"></td>
             </tr>
           </tbody>
         </table>
-      </div><br>
+      <br>
       <!-- ITEM 1 -->
         <!-- ITEM 2 -->
-          <div class="container">
+          
             <h4 class="ctitulo2 rounded-lg">2 - Antecedentes de la Iniciativa</h4>
             <h4>2.1 Prioridad Regional que Abordará la Iniciativa</h4>
             <h6 class="alert alert-secondary">Sólo se podrá marcar una casilla. <br>Indicar la que tenga mayor
@@ -144,19 +144,19 @@
               superar los $200.000.000).</h6>
               
             <h1>TABLA</h1>
-          </div>
+          
           <!-- ITEM 2 -->
             <!-- ITEM 3 -->
-              <div class="container">
+              
                 <h4 class="ctitulo2 rounded-lg">3 - Estado del Arte</h4>
                 <h6 class="alert alert-secondary"> (Indicar qué existe en Chile y en el extranjero relacionado con la
                   innovación propuesta, incluyendo información cualitativa y cuantitativa, citando las fuentes
                   utilizadas (máximo 10.000 caracteres).</h6> <textarea rows="30" name="estado" cols="123"
                   maxlength="10000" style=" resize:none;" placeholder="Máximo 10.000 caracteres" required=""></textarea>
-              </div>
+              
               <!-- ITEM 3 -->
                 <!-- ITEM 4 -->
-                  <div class="container">
+                  
                     <h4 class="ctitulo2 rounded-lg">4 - Descripción de la Propuesta Técnica y Metodológica</h4>
                     <h4>4.1 Problema identificado u oportunidad que se desea abordar </h4>
                     <h6 class="alert alert-secondary"> (Indicar qué existe en Chile y en el extranjero relacionado con
@@ -258,10 +258,10 @@
                     <h6 class="alert alert-primary">La subida del documento "Integrantes" se ubica en el <b>ítem fi0nal</b>: "Anexos y Documentación para Adjuntar"</h6>
                     <h4>4.15 Plan de Contingencia</h4>
                     <textarea rows="7" name="metodologia" cols="123" maxlength="10000" placeholder="Máximo 5.000 caracteres" style=" resize:none;" required=""></textarea><br>
-                  </div>
+                 
                   <!-- ITEM 4 --> <br>
 
-                  <div class="container">
+                  
                   <h4 class="ctitulo2 rounded-lg">5 - Anexos y Documentación para Adjuntar</h4>
                   <h6 class="alert alert-danger col-lg-4"><b>Tamaño Máximo de Archivos: 20MB</b></h6>
                   <table style="height: 143px; width: 100%;">
