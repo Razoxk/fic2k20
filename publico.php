@@ -134,19 +134,6 @@
         <!-- ITEM 2 -->
         <h4 class="ctitulo2 rounded-lg">2 - Antecedentes de la Iniciativa</h4>
             <h4>2.1 Prioridad Regional que Abordará la Iniciativa</h4>
-<<<<<<< HEAD
-              <h6 class="alert alert-secondary col-md-4">Sólo se podrá marcar una casilla. 
-                <br>Indicar la que tenga mayor relevancia con la iniciativa propuesta.</h6>
-          
-              <h1>TABLA</h1>
-            
-              <h4>2.2 Destino del Proyecto</h4>
-            <h1>TABLA</h1>
-              <h4>2.3 Duración y Sede de la Iniciativa</h4>
-            <h6 class="alert alert-secondary col-md-3">Duración Total (en meses, máximo 36 meses):</h6>
-              <input type="text" class="form-control col-md-1" maxlength="2"><br>
-              <h4>Lugar o Lugares de Ejecución de la Iniciativa</h4>
-=======
             <h6 class="alert alert-secondary col-md-4">Sólo se podrá marcar una casilla. <br>Indicar la que tenga mayor
               relevancia con la iniciativa propuesta.</h6>
             
@@ -385,7 +372,6 @@
             <h6 class="alert alert-secondary col-md-3">Duración Total (en meses, máximo 36 meses):</h6><input type="text"
               class="form-control col-md-1" maxlength="2"><br>
             <h4>Lugar o Lugares de Ejecución de la Iniciativa</h4>
->>>>>>> b0bfa4ad222abb4111c46703b9942d6c6e0c5ff7
             <h6 class="alert alert-secondary col-md-5">(Comunas y localidades de la Región de O'Higgins donde se ejecutarán las
               actividades) </h6>
             <input type="text" class="form-control col-md-4"><br>
