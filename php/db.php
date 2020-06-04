@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "postgober";
+$dbname = "fic2k20";
 
 try {
   $conn = new PDO("mysql:host=$servername;dbname=postgober", $username, $password);
@@ -12,7 +12,6 @@ try {
 } catch(PDOException $e) {
   echo "Error al conectar: " . $e->getMessage();
 }
-
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
