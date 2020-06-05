@@ -9,6 +9,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
     </script>
+    <script type="text/javascript" src="js/main.js"></script>
     <link rel="icon" type="image/jpg" href="src/logoblanco.jpg">
     <title>POSTULACION PRIVADA</title>
     <style>
@@ -39,7 +40,7 @@
         <td width="130"><a href="index.php"><img src="src/logoblanco.jpg" width="150" height="150" /></a></td>
         <td colspan="3" valign="middle" class="ctitulo">
           <h2>Formulario Postulaci&oacuten FIC - Institución Pública</h2>
-          <h3>Divisi&oacuten de Planificaci&oacuten y Ordenamiento Territorial<br>Gobierno Regional de O'Higgins</h3>
+          <h3>Divisi&oacuten de Fomento e Industria<br>Gobierno Regional de O'Higgins</h3>
         </td>
         <td width="15%" align="right" valign="bottom">
           <p><br>
@@ -378,6 +379,124 @@
             <h4>2.4 Presupuesto</h4>
             <h6 class="alert alert-secondary col-md-5"> Ingrese el monto a financiar por el FIC para cada subítem (no puede
               superar los $200.000.000).</h6>
+
+              
+    <div class="row container">
+    <div align="center"  class="pt-2 col-md-2 border border-dark">GASTOS</div>
+    <div align="center"  class="pt-2 col-md-2 border border-dark">ACTIVIDADES</div>
+    <div class="col-md-2 border border-dark">MONTO SOLICITADO AL FIC (M$) </div>
+    <div class="col-md-2 border border-dark">APORTE PECUNIARIO(M$)</div>
+    <div class="col-md-2 border border-dark">APORTE NO PECUNIARIO (M$)</div>
+    <div class="col-md-2 border border-dark">MONTO TOTAL PROYECTO (M$)</div>
+    </div>
+
+    <div class="row container">
+    <div align="center"  class="pt-2 col-md-2  border-left border-dark "></div>
+    <div align="center"  class="pt-2 col-md-2 border border-dark">Actividades de Investigación y Desarrollo</div>
+    <div align="center" class="pt-3 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)"></div>
+    <div align="center" class="pt-3 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)"></div>
+    <div align="center" class="pt-3 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)"></div>
+    <div align="center" class="pt-3 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)" readonly></div>
+    </div>
+
+    <div class="row container">
+    <div align="center"  class="pt-2 col-md-2 border-left border-dark  "></div>
+    <div align="center"  class="pt-2 col-md-2 border border-dark">Actividades de Fomento a la Adopción de la Innovación</div>
+    <div align="center" class="pt-3 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)"></div>
+    <div align="center" class="pt-3 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)"></div>
+    <div align="center" class="pt-3 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)"></div>
+    <div align="center" class="pt-3 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)" readonly></div>
+    </div>
+
+    <div class="row container">
+    <div align="center"  class="pt-2 col-md-2 border-left border-dark  "><b>Gastos de Contratación del Proyecto</b></div>
+    <div align="center"  class="pt-2 col-md-2 border border-dark">Actividades de Desarrollo y Transferencia de Tecnologías</div>
+    <div align="center" class="p-3 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)"></div>
+    <div align="center" class="p-3 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)"></div>
+    <div align="center" class="p-3 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)"></div>
+    <div align="center" class="p-3 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)" readonly></div>
+    </div>
+
+    <div class="row container">
+    <div align="center"  class="pt-2 col-md-2 border-bottom border-dark border-left border-dark "></div>
+    <div align="center"  class="pt-2 col-md-2 border border-dark">Otras Actividades que guarden estricta relación con los objetivos y los resultados comprometidos de la innovación propuesta</div>
+    <div align="center" class="p-3 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)"></div>
+    <div align="center" class="p-3 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)"></div>
+    <div align="center" class="p-3 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)"></div>
+    <div align="center" class="p-3 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)" readonly></div>
+    </div>
+
+
+
+    <div class="row container">
+    <div align="center"  class="pt-2 col-md-2 border-bottom border-left border-dark  border-dark">15.2 Difusión (10%)</div>
+    <div align="center"  class="pt-2 col-md-2 border border-dark">Detallar</div>
+    <div align="center" class="p-2 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)"></div>
+    <div align="center" class="p-2 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)"></div>
+    <div align="center" class="p-2 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)"></div>
+    <div align="center" class="p-2 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)" readonly></div>
+    </div>
+
+
+    <div class="row container">
+    <div align="center"  class="pt-2 col-md-2 border-left border-dark ">15.3 Gastos de Administración (5%)</div>
+    <div align="center"  class="pt-2 col-md-2 border border-dark">Materiales de Oficina</div>
+    <div align="center" class="p-2 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)"></div>
+    <div align="center" class="p-2 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)"></div>
+    <div align="center" class="p-2 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)"></div>
+    <div align="center" class="p-2 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)" readonly></div>
+    </div>
+    <div class="row container">
+    <div align="center"  class="pt-2 col-md-2 border-left border-dark  border-bottom border-dark"></div>
+    <div align="center"  class="pt-2 col-md-2 border border-dark">Equipo Administrativo profesionales o técnicos </div>
+    <div align="center" class="p-2 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)"></div>
+    <div align="center" class="p-2 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)"></div>
+    <div align="center" class="p-2 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)"></div>
+    <div align="center" class="p-2 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)" readonly></div>
+    </div>
+
+
+    
+
+
+    <div class="row container">
+    <div align="center"  class="pt-2 col-md-2 border-left border-dark  border-bottom border-dark">15.4 Adquisición de Máquinas, Equipos e Insumos</div>
+    <div align="center"  class="pt-2 col-md-2 border border-dark">Detallar</div>
+    <div align="center" class="p-2 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)"></div>
+    <div align="center" class="p-2 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)"></div>
+    <div align="center" class="p-2 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)"></div>
+    <div align="center" class="p-2 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)" readonly></div>
+    </div>
+
+
+    <div class="row container">
+    <div align="center"  class="pt-2 col-md-2 border-left border-dark  border-bottom border-dark">15.5 Mobiliario</div>
+    <div align="center"  class="pt-2 col-md-2 border border-dark">Detallar</div>
+    <div align="center" class="p-2 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)"></div>
+    <div align="center" class="p-2 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)"></div>
+    <div align="center" class="p-2 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)"></div>
+    <div align="center" class="p-2 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)" readonly></div>
+    </div>
+
+
+    <div class="row container">
+    <div align="center"  class="pt-2 col-md-2 border-left border-dark  border-bottom border-dark">15.6 Infraestructura (10%)</div>
+    <div align="center"  class="pt-2 col-md-2 border border-dark">Detallar</div>
+    <div align="center" class="p-2 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)"></div>
+    <div align="center" class="p-2 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)"></div>
+    <div align="center" class="p-2 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)"></div>
+    <div align="center" class="p-2 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)" readonly></div>
+    </div>
+
+
+    <div class="row container pb-4">
+    <div align="center"  class="pt-2 col-md-2 border-left border-dark  border-bottom border-dark">TOTALES PROYECTO</div>
+    <div align="center"  class="pt-2 col-md-2 border border-dark">Detallar</div>
+    <div align="center" class="p-2 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" readonly></div>
+    <div align="center" class="p-2 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" readonly></div>
+    <div align="center" class="p-2 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" readonly></div>
+    <div align="center" class="p-2 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" readonly></div>
+    </div>
 <!--------------------------------------------------------------------------------->             
             <h1>TABLA</h1>
           
@@ -444,14 +563,21 @@
                         </tr>
                       </tbody>
                     </table>
-                    <h6 class="alert alert-primary">La descarga y subida de los "Objetivos Específicos"se ubica en el
-                      <b>ítem final</b>: "Anexos y Documentación para Adjuntar"</h6>
+
+
+                   <div class="row container pb-5"><h6 class="pt-1">La subida de los "Objetivos Específicos" se ubica aquí</h6>
+                   <input class="pl-4" required="" type="file" name="" id="">
+                   </div>
+
+
                     <h4>4.5 Resultados Esperados e Indicadores de Resultados</h4>
-                    <h6 class="alert alert-primary">La descarga y subida de los "Resultados Esperados e Indicadores de
-                      Resultados"se ubica en el <b>ítem final</b>: "Anexos y Documentación para Adjuntar"</h6>
+                    <div class="row container pb-5"><h6 class="pt-1">La descarga y subida de los "Objetivos Específicos" se ubica aquí</h6><a class="pl-4" href="src/anexos/resultados_esperados.xlsx" download="resultados_esperados.xlsx"> Descargar</a>
+                   <input class="pl-4" required="" type="file" name="" id="">
+                   </div>
                     <h4>4.6 Indicadores de Evaluación Ex-ante</h4>
-                    <h6 class="alert alert-primary">La descarga y subida de los "Indicadores de evaluación Ex-ante"se
-                      ubica en el <b>ítem final</b>: "Anexos y Documentación para Adjuntar"</h6>
+                    <div class="row container pb-5"><h6 class="pt-1">La descarga y subida de los "Indicadores de evaluación Ex-ante" se ubica aquí</h6><a class="pl-4" href="src/anexos/indicadores_evaluacion_ex-ante.xlsx" download="indicadores_evaluacion_ex-ante.xlsx"> Descargar</a>
+                   <input class="pl-4" required="" type="file" name="" id="">
+                   </div>
                     <h4>4.7 Beneficiarios Directos</h4>
                     <h6 class="alert alert-primary">(Consistente con los resultados esperados del proyecto)</h6>                
                     <table width="70%" border="0">
@@ -465,7 +591,6 @@
                           <td class="border border-white pl-2" style="background: #E2E3E5;">Beneficiarios Hombres</td>
                           <td><input type="text" class="form-control col-md-8"maxlength="11"></td>
                           <td><input type="text" class="form-control col-md-11" maxlength="10000" placeholder="Máximo 10.000 caracteres">
-                          <textarea class="form-control" maxlength="10000" placeholder="Máximo 10.000 caracteres" rows="3"></textarea></td>
                         </tr>
                         <tr>
                           <td class="border border-white pl-2" style="background: #E2E3E5;">Beneficiarios Mujeres</td>
@@ -491,7 +616,9 @@
                     <h6 class="alert alert-primary">(Describir el modelo propuesto para dar continuidad a la iniciativa, una vez terminada la intervención del proyecto. Se deberá entregar certificado de responsabilidad de la Institución que se hará cargo de la operación post proyecto y de sus costos de mantención). </h6>
                     <textarea rows="7" name="metodologia" cols="123" maxlength="10000" placeholder="Máximo 5.000 caracteres" class="form-control" style=" resize:none;" required=""></textarea><br>
                     <h4>4.12 Calendarización de Actividades</h4>
-                    <h6 class="alert alert-primary">La subida de la "Carta Gantt" se ubica en el <b>ítem final</b>: "Anexos y Documentación para Adjuntar"</h6>
+                    <div class="row container pb-5"><h6 class="pt-1">La subida de la "Carta Gantt" se ubica aquí</h6><a class="pl-4" href="src/anexos/formato_carta_gantt_2020.xls" download="formato_carta_gantt_2020.xls"> Descargar</a>
+                   <input class="pl-4" required="" type="file" name="" id="">
+                   </div>
                     <h4>4.13 Plan de Contingencia</h4>
                     <h6 class="alert alert-primary">Incorpore un plan de contingencia, considerando para ello escenarios desfavorables y posibles riesgos en la ejecución del proyecto (máximo 5.000 caracteres) </h6>
                     <textarea rows="7" name="metodologia" cols="123" maxlength="10000" placeholder="Máximo 5.000 caracteres" class="form-control" style=" resize:none;" required=""></textarea><br>
@@ -531,11 +658,7 @@
           <td class="archivo1"></td>
           <td class="archivo1"><input type="file" name="grafico[]" id="grafico[]" multiple="multiple"></td>
         </tr>
-        <tr>
-          <td class="archivo1">Objetivos Específicos</td>
-          <td class="archivo1"><a href="bajar44.php" target="_blank">Descargar</a></td>
-          <td class="archivo1"><input required="" type="file" name="obj_especifico" id="obj_especifico"></td>
-        </tr>
+      
         <tr>
           <td class="archivo1">Anexo 6 - Formato de Carta Compromiso Costos de Operación Post Proyecto</td>
           <td class="archivo1"><a href="bajaranexo6.php" target="_blank">Descargar</a></td>
@@ -549,16 +672,6 @@
           <td class="archivo1">Resultados Esperados e Indicadores de Resultados</td>
           <td class="archivo1"><a href="bajar45.php" target="_blank">Descargar</a></td>
           <td class="archivo1"><input required="" type="file" name="resultadoesperado" id="resultadoesperado"></td>
-        </tr>
-        <tr>
-          <td class="archivo1">Indicadores de evaluación Ex-ante</td>
-          <td class="archivo1"><a href="bajar46.php" target="_blank">Descargar</a></td>
-          <td class="archivo1"><input required="" type="file" name="exante" id="exante"></td>
-        </tr>
-        <tr>
-          <td class="archivo1">Carta Gantt</td>
-          <td class="archivo1"><a href="bajar412.php" target="_blank">Descargar</a></td>
-          <td class="archivo1"><input required="" type="file" name="calendario" id="calendario"></td>
         </tr>
         <tr>
           <td class="archivo1">Función de cada integrante del proyecto y horas dedicadas</td>
