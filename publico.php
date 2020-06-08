@@ -391,7 +391,7 @@
     </div>
 
     <div class="row container">
-    <div align="center"  class="pt-2 col-md-2  border-left border-dark "></div>
+    <div align="center"  class="pt-2 col-md-2  border-left border-dark"></div>
     <div align="center"  class="pt-2 col-md-2 border border-dark">Actividades de Investigación y Desarrollo</div>
     <div align="center" class="pt-3 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)"></div>
     <div align="center" class="pt-3 col-md-2 border border-dark"><input type="text" class="form-control" placeholder="M$" onKeyPress="return soloNumeros(event)"></div>

@@ -7,3 +7,6 @@ function soloNumeros(e){
 	return (key >= 48 && key <= 57)
 
 }
+
+
+
