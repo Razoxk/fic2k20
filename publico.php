@@ -54,7 +54,7 @@
     
     
       <div class="container">
-      <form method="POST">
+      <form id="formulario" name="formulario" method="POST" enctype="multipart/form-data" onsubmit="return Comprobar()">
       <div class="container">
         <h4 class="ctitulo2 rounded-lg">1 - Antecedentes Generales</h4>
         <h4>1.1 Nombre de Proyecto</h4><input type="text" name="nombreProyecto" class="form-control"><br>
