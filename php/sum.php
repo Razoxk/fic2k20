@@ -327,7 +327,7 @@
         </script>
         <div class="container-fluid">
             <p></p>
-            <h3>2.4 Presupuesto</h3>
+            
             <p>Ingrese el monto a financiar por el FIC para cada subítem (no puede superar los $240.000.000).</p>
 
             <table class="table table-bordered" border="1px solid black">
@@ -356,7 +356,7 @@
                 <tr>
                     <td class="tg-hix7">Actividades de Fomento a la Adopción de la Innovación</td>
                     <th class="tg-hix7"><input type="text" maxlength="9" name="ingreso2" id="ingreso2" onkeyup="Suma()"
-                            onkeypress="return valida(event)" onpaste="return false" required></th>
+                            onkeypress="return valida(event)"  onpaste="return false" required></th>
                     <th class="tg-hix7"><input type="text" maxlength="9" name="ingreso12" id="ingreso12"
                             onkeyup="Suma()" onkeypress="return valida(event)" onpaste="return false" required></th>
                     <th class="tg-hix7"><input type="text" maxlength="9" name="ingreso22" id="ingreso22"
