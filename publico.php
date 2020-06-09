@@ -377,9 +377,12 @@
               actividades) </h6>
             <input type="text" class="form-control col-md-4"><br>
             <h4>2.4 Presupuesto</h4>
+
+            
             <?php
             include ("php/sum.php");
             ?>
+          
 <!--------------------------------------------------------------------------------->             
             <h1>TABLA</h1>
           
