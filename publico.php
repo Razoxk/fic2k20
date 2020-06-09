@@ -11,7 +11,7 @@
     </script>
     <script type="text/javascript" src="js/main.js"></script>
     <link rel="icon" type="image/jpg" href="src/logoblanco.jpg">
-    <title>POSTULACION PRIVADA</title>
+    <title>POSTULACION PÚBLICA</title>
     <style>
       .ctitulo {
         color: white;
