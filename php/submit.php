@@ -49,6 +49,18 @@ $sqlRepresentante = "INSERT INTO representante_legal (id, id_proyecto, rut, nomb
     VALUES ('', '$id_proyecto','$rutRepresentante','$nombreRepresentante','$cargoRepresentante','$numeroRepresentante', '$celularRepresentante', '$emailRepresentante','$direccionRepresentante' )";
 $conn->query($sqlRepresentante);
 
+// 2 - Antecedentes de la Iniciativa
+
+$prioridadRegional = $_POST['options1'];
+$destinoProyecto = $_POST['destino'];
+$duracionSede = $_POST['duracionSede'];
+$totalPresupuesto = $_POST['proy_total3'];
+$lugarEjecucion = $_POST['lugar_ejecucion'];
+
+$sqlAntecedentes = "INSERT INTO antecedentes_iniciativa(id, id_proyecto, prioridad_regional, destino_proyecto, duracion_sede_iniciativa, lugar_ejecucion, presupuesto_total) 
+    VALUES ('', '$id_proyecto','$prioridadRegional','$destinoProyecto','$duracionSede', '$lugarEjecucion','$totalPresupuesto')";
+$conn->query($sqlAntecedentes);
+
 
 //3. Estado del Arte
 
