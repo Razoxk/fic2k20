@@ -8,6 +8,5 @@ function soloNumeros(e){
 
 }
 
-$( document ).ready(function() {
-});
+
 
