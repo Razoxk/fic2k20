@@ -15,4 +15,13 @@ try {
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-?> 
+$estadoArte = "Estado arte";
+$id_proyecto = 1;
+
+
+$sqlEstadoarte = "INSERT INTO anexos(id, id_proyecto, anexo_2) 
+VALUES ('', '$id_proyecto','$estadoArte')";
+$conn->query($sqlEstadoarte);
+
+
+?>

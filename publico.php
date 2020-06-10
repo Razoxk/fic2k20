@@ -11,7 +11,7 @@
     </script>
     <script type="text/javascript" src="js/main.js"></script>
     <link rel="icon" type="image/jpg" href="src/logoblanco.jpg">
-    <title>POSTULACION PÚBLICA</title>
+    <title>POSTULACION PRIVADA</title>
     <style>
       .ctitulo {
         color: white;
@@ -54,7 +54,7 @@
     
     
       <div class="container">
-      <form id="formulario" name="formulario" method="POST" enctype="multipart/form-data" onsubmit="return Comprobar()">
+      <form id="formulario" name="formulario" method="POST" action="php/submit.php" enctype="multipart/form-data" onsubmit="return Comprobar()">
       <div class="container">
         <h4 class="ctitulo2 rounded-lg">1 - Antecedentes Generales</h4>
         <h4>1.1 Nombre de Proyecto</h4><input type="text" name="nombreProyecto" class="form-control"><br>
@@ -401,18 +401,18 @@
 <!-- AQUI VA LO CORTADO -->
 <!-- ITEM 4 -->
                   
-<h4 class="ctitulo2 rounded-lg">4 - Descripción de la Propuesta Técnica y Metodológica</h4>
+        <h4 class="ctitulo2 rounded-lg">4 - Descripción de la Propuesta Técnica y Metodológica</h4>
             <h4>4.1 Problema identificado u oportunidad que se desea abordar </h4>
                 <h6 class="alert alert-secondary"> (Indicar qué existe en Chile y en el extranjero relacionado con
                       la innovación propuesta, incluyendo información cualitativa y cuantitativa, citando las fuentes
                       utilizadas (máximo 10.000 caracteres).</h6> 
-                <textarea rows="7" name="problema" cols="123" class="form-control" maxlength="10000" style=" resize:none;" required="" placeholder="Máximo 10.000 caracteres"></textarea><br><br>
+                <textarea rows="7" name="problema_oportunidad" id="problema_oportunidad" cols="123" class="form-control" maxlength="10000" style=" resize:none;" required="" placeholder="Máximo 10.000 caracteres"></textarea><br><br>
                     
             <h4>4.2 Mérito innovador de la iniciativa </h4>
                 <h6 class="alert alert-secondary"> (Deberá indicar la novedad, originalidad y los aspectos
                       diferenciadores del producto, proceso o servicio respecto de lo que existe actualmente y su grado
                       de innovación e inexistencia de la innovación propuesta, dentro del país o región)</h6> 
-                      <textarea rows="7" name="problema" cols="123" class="form-control" maxlength="10000" style=" resize:none;" required="" placeholder="Máximo 10.000 caracteres"></textarea><br>
+                      <textarea rows="7" name="merito_innovador" id="merito_innovador" cols="123" class="form-control" maxlength="10000" style=" resize:none;" required="" placeholder="Máximo 10.000 caracteres"></textarea><br>
                     <h6 class="alert alert-primary">La descarga y subida de los "Gráfico e Imágen"se ubica en el ítem
                       final: "Anexos y Documentación para Adjuntar"</h6><br>
                     
@@ -421,7 +421,7 @@
                       difusión y transferencia tecnológica; aceleración del emprendimiento innovador; formación,
                       inserción y atracción de recursos humanos especializados; fortalecimiento de redes para la
                       innovación y equipamiento de apoyo a la competitividad (remitirse al punto 3 de las bases) </h6>
-                    <textarea rows="7" name="problema" class="form-control" cols="123" maxlength="10000" style=" resize:none;" required=""
+                    <textarea rows="7" name="descripcion_resultados" id="descripcion_resultados" class="form-control" cols="123" maxlength="10000" style=" resize:none;" required=""
                       placeholder="Máximo 10.000 caracteres"></textarea>
             
             
@@ -430,39 +430,39 @@
                       <tbody>
                         <tr>
                           <td class="border border-white" style="background: #E2E3E5;">Objetivo General &nbsp; </td>
-                          <td><input type="text" class="form-control"></td>
+                          <td><input type="text" name="objetivo_general" class="form-control"></td>
                         </tr>
                         <tr>
                           <td class="border border-white" style="background: #E2E3E5;">Indicador de resultado de
                             Objetivo General &nbsp; </td>
-                          <td><input type="text" class="form-control"></td>
+                          <td><input type="text" name="indicador_resultado" class="form-control"></td>
                         </tr>
                         <tr>
                           <td class="border border-white" style="background: #E2E3E5;">Meta de Indicador de resultado
                             &nbsp; </td>
-                          <td><input type="text" class="form-control"></td>
+                          <td><input type="text" name="meta_indicador" class="form-control"></td>
                         </tr>
                         <tr>
                           <td class="border border-white" style="background: #E2E3E5;">Medios de Verificación &nbsp;
                           </td>
-                          <td><input type="text" class="form-control"></td>
+                          <td><input type="text" name="medios_verificacion" class="form-control"></td>
                         </tr>
                       </tbody>
                     </table>
 
 
                    <div class="row container pb-5"><h6 class="pt-1">La subida de los "Objetivos Específicos" se ubica aquí</h6>
-                   <input class="pl-4" required="" type="file" name="" id="">
+                   <input class="pl-4" required type="file" name="archivo4" id="">
                    </div>
 
 
                     <h4>4.5 Resultados Esperados e Indicadores de Resultados</h4>
                     <div class="row container pb-5"><h6 class="pt-1">La descarga y subida de los "Objetivos Específicos" se ubica aquí</h6><a class="pl-4" href="src/anexos/resultados_esperados.xlsx" download="resultados_esperados.xlsx"> Descargar</a>
-                   <input class="pl-4" required="" type="file" name="" id="">
+                   <input class="pl-4" required="" type="file" name="archivo8" id="archivo8">
                    </div>
                     <h4>4.6 Indicadores de Evaluación Ex-ante</h4>
                     <div class="row container pb-5"><h6 class="pt-1">La descarga y subida de los "Indicadores de evaluación Ex-ante" se ubica aquí</h6><a class="pl-4" href="src/anexos/indicadores_evaluacion_ex-ante.xlsx" download="indicadores_evaluacion_ex-ante.xlsx"> Descargar</a>
-                   <input class="pl-4" required="" type="file" name="" id="">
+                   <input class="pl-4" required="" type="file" name="archivo9" id="archivo9">
                    </div>
                     <h4>4.7 Beneficiarios Directos</h4>
                     <h6 class="alert alert-primary">(Consistente con los resultados esperados del proyecto)</h6>                
@@ -475,43 +475,50 @@
                         </tr>
                         <tr>
                           <td class="border border-white pl-2" style="background: #E2E3E5;">Beneficiarios Hombres</td>
-                          <td><input type="text" class="form-control col-md-8"maxlength="11"></td>
-                          <td><input type="text" class="form-control col-md-11" maxlength="10000" placeholder="Máximo 10.000 caracteres">
+                          <td><input type="text" name="beneficiarios_num_hombres" class="form-control col-md-8"maxlength="11"></td>
+                          <td><input type="text" name="beneficiarios_text_hombres" class="form-control col-md-11" maxlength="10000" placeholder="Máximo 10.000 caracteres">
                         </tr>
                         <tr>
                           <td class="border border-white pl-2" style="background: #E2E3E5;">Beneficiarios Mujeres</td>
-                          <td><input type="text" class="form-control col-md-8"maxlength="11"></td>
-                          <td><input type="text" class="form-control col-md-11" maxlength="10000" placeholder="Máximo 10.000 caracteres"></td>
+                          <td><input type="text" name="beneficiarios_num_mujeres" class="form-control col-md-8"maxlength="11"></td>
+                          <td><input type="text" name="beneficiarios_text_mujeres" class="form-control col-md-11" maxlength="10000" placeholder="Máximo 10.000 caracteres"></td>
                         </tr>
                         <tr>
                           <td class="border border-white pl-2" style="background: #E2E3E5;">Empresas Beneficiadas</td>
-                          <td><input type="text" class="form-control col-md-8"maxlength="11"></td>
-                          <td><input type="text" class="form-control col-md-11" maxlength="10000" placeholder="Máximo 10.000 caracteres"></td>
+                          <td><input type="text" name="beneficiarios_num_empresas" class="form-control col-md-8"maxlength="11"></td>
+                          <td><input type="text" name="beneficiarios_text_empresas" class="form-control col-md-11" maxlength="10000" placeholder="Máximo 10.000 caracteres"></td>
                         </tr>
                       </tbody>
                     </table><br>
                     <h4>4.8 Metodología a Aplicar en el Proyecto</h4>
-                    <textarea rows="7" name="metodologia" cols="123" maxlength="10000" placeholder="Máximo 10.000 caracteres" class="form-control" style=" resize:none;" required=""></textarea><br>
+                    <textarea rows="7" name="metodologia_proyecto" cols="123" maxlength="10000" placeholder="Máximo 10.000 caracteres" class="form-control" style=" resize:none;" required=""></textarea><br>
+                    
                     <h4>4.9 Actividades de Difusión y Divulgación Científica</h4>
                     <h6 class="alert alert-primary">(Describir los mecanismos a utilizar e indicar las acciones a realizar)</h6>
-                    <textarea rows="7" name="metodologia" cols="123" maxlength="10000" placeholder="Máximo 10.000 caracteres" class="form-control" style=" resize:none;" required=""></textarea><br>
+                    <textarea rows="7" name="actividades_difusion" cols="123" maxlength="10000" placeholder="Máximo 10.000 caracteres" class="form-control" style=" resize:none;" required=""></textarea><br>
+                    
                     <h4>4.10 10 Mecanismos de Transferencia Tecnológica </h4>
                     <h6 class="alert alert-primary">(Describir los mecanismos a utilizar e indicar las acciones a realizar)</h6>
-                    <textarea rows="7" name="metodologia" cols="123" maxlength="10000" placeholder="Máximo 10.000 caracteres" class="form-control" style=" resize:none;" required=""></textarea><br>
+                    <textarea rows="7" name="mecanismos_transferencias" cols="123" maxlength="10000" placeholder="Máximo 10.000 caracteres" class="form-control" style=" resize:none;" required=""></textarea><br>
+                    
                     <h4>4.11 Modelo de Sustentabilidad  </h4>
                     <h6 class="alert alert-primary">(Describir el modelo propuesto para dar continuidad a la iniciativa, una vez terminada la intervención del proyecto. Se deberá entregar certificado de responsabilidad de la Institución que se hará cargo de la operación post proyecto y de sus costos de mantención). </h6>
-                    <textarea rows="7" name="metodologia" cols="123" maxlength="10000" placeholder="Máximo 5.000 caracteres" class="form-control" style=" resize:none;" required=""></textarea><br>
+                    <textarea rows="7" name="modelo_sustentabilidad" cols="123" maxlength="10000" placeholder="Máximo 5.000 caracteres" class="form-control" style=" resize:none;" required=""></textarea><br>
+                    
                     <h4>4.12 Calendarización de Actividades</h4>
                     <div class="row container pb-5"><h6 class="pt-1">La subida de la "Carta Gantt" se ubica aquí</h6><a class="pl-4" href="src/anexos/formato_carta_gantt_2020.xls" download="formato_carta_gantt_2020.xls"> Descargar</a>
-                   <input class="pl-4" required="" type="file" name="" id="">
+                   <input class="pl-4" required="" type="file" name="archivo9" id="archivo9">
                    </div>
+                    
                     <h4>4.13 Plan de Contingencia</h4>
                     <h6 class="alert alert-primary">Incorpore un plan de contingencia, considerando para ello escenarios desfavorables y posibles riesgos en la ejecución del proyecto (máximo 5.000 caracteres) </h6>
-                    <textarea rows="7" name="metodologia" cols="123" maxlength="10000" placeholder="Máximo 5.000 caracteres" class="form-control" style=" resize:none;" required=""></textarea><br>
+                    <textarea rows="7" name="plan_contingencia" cols="123" maxlength="10000" placeholder="Máximo 5.000 caracteres" class="form-control" style=" resize:none;" required=""></textarea><br>
+                    
                     <h4>4.14 Función de Cada Integrante del Proyecto y Horas de Dedicación</h4>
-                    <h6 class="alert alert-primary">La subida del documento "Integrantes" se ubica en el <b>ítem fi0nal</b>: "Anexos y Documentación para Adjuntar"</h6>
-                    <h4>4.15 Plan de Contingencia</h4>
-                    <textarea rows="7" name="metodologia" cols="123" maxlength="10000" placeholder="Máximo 5.000 caracteres" class="form-control" style=" resize:none;" required=""></textarea><br>
+                    <h6 class="alert alert-primary">La subida del documento "Integrantes" se ubica en el <b>ítem final</b>: "Anexos y Documentación para Adjuntar"</h6>
+                    
+                    <h4>4.15 Bibliografía Referencial</h4>
+                    <textarea rows="7" name="bibliografia_referencial" cols="123" maxlength="10000" placeholder="Máximo 5.000 caracteres" class="form-control" style=" resize:none;" required=""></textarea><br>
                  
                   <!-- ITEM 4 --> <br>
 
@@ -532,62 +539,62 @@
         <tr>
           <td class="archivo1">Anexo 2 - Carta de Declaración de Responsabilidad</td>
           <td class="archivo1"><a href="bajaranexo2.php" target="_blank">Descargar</a></td>
-          <td class="archivo1"><input required="" type="file" name="anexo2" id="anexo2"></td>
+          <td class="archivo1"><input required="" type="file" name="archivo1" id="archivo1"></td>
         </tr>
         <tr>
           <td class="archivo1">Anexo 3 - Formatos de Cartas</td>
           <td class="archivo1"><a href="bajaranexo3.php" target="_blank">Descargar</a></td>
-          <td class="archivo1"><input required="" type="file" name="anexo3[]" id="anexo3[]" multiple="multiple"></td>
+          <td class="archivo1"><input required="" type="file" name="archivo2" id="archivo2" multiple="multiple"></td>
         </tr>
         <tr>
           <td class="archivo1"><u>Opcional</u> - Gráfico e Imágen</td>
           <td class="archivo1"></td>
-          <td class="archivo1"><input type="file" name="grafico[]" id="grafico[]" multiple="multiple"></td>
+          <td class="archivo1"><input type="file" name="archivo3" id="archivo3" multiple="multiple"></td>
         </tr>
       
         <tr>
           <td class="archivo1">Anexo 6 - Formato de Carta Compromiso Costos de Operación Post Proyecto</td>
           <td class="archivo1"><a href="bajaranexo6.php" target="_blank">Descargar</a></td>
-          <td class="archivo1"><input required="" type="file" name="anexo8" id="anexo8"></td>
+          <td class="archivo1"><input required="" type="file" name="archivo5" id="archivo5"></td>
         </tr>
         <tr>
           <td class="archivo1">Presupuesto detallado del proyecto</td>
           <td class="archivo1"><a href="bajarpresu.php" target="_blank">Descargar</a></td>
-          <td class="archivo1"><input required="" type="file" name="presupuesto" id="presupuesto"></td>
+          <td class="archivo1"><input required="" type="file" name="archivo6" id="archivo6"></td>
         </tr><tr>
           <td class="archivo1">Resultados Esperados e Indicadores de Resultados</td>
           <td class="archivo1"><a href="bajar45.php" target="_blank">Descargar</a></td>
-          <td class="archivo1"><input required="" type="file" name="resultadoesperado" id="resultadoesperado"></td>
+          <td class="archivo1"><input required="" type="file" name="archivo7" id="archivo7"></td>
         </tr>
         <tr>
           <td class="archivo1">Función de cada integrante del proyecto y horas dedicadas</td>
           <td class="archivo1"><a href="bajar415.php" target="_blank">Descargar</a></td>
-          <td class="archivo1"><input required="" type="file" name="integrantes" id="integrantes"></td>
+          <td class="archivo1"><input required="" type="file" name="archivo10" id="archivo10"></td>
         </tr>
         <tr>
           <td class="archivo1">Copia simple del Rol Único Tributario de la Entidad postulante</td>
           <td class="archivo1"></td>
-          <td class="archivo1"><input required="" type="file" name="tributario" id="tributario"></td>
+          <td class="archivo1"><input required="" type="file" name="archivo11" id="archivo11"></td>
         </tr>
         <tr>
           <td class="archivo1">Copia simple de la Cédula de Identidad del representante legal o mandatario</td>
           <td class="archivo1"></td>
-          <td class="archivo1"><input required="" type="file" name="cedula" id="cedula"></td>
+          <td class="archivo1"><input required="" type="file" name="archivo12" id="archivo12"></td>
         </tr>
         <tr>
           <td class="archivo1">Copia simple del instrumento que nombra al representante legal o mandatario y del que lo faculta para firmar</td>
           <td class="archivo1"></td>
-          <td class="archivo1"><input required="" type="file" name="replegal" id="replegal"></td>
+          <td class="archivo1"><input required="" type="file" name="archivo13" id="archivo13"></td>
         </tr>
         <tr>
           <td class="archivo1"><u>Opcional</u> - Carta de la autoridad sectorial o territorial (SEREMIs, Directores Regionales de Servicios Públicos y/o Municipios) que indica que la iniciativa es pertinente con las políticas o planes sectoriales o comunales</td>
           <td class="archivo1"></td>
-          <td class="archivo1"><input type="file" name="carta" id="carta"></td>
+          <td class="archivo1"><input type="file" name="archivo14" id="archivo14"></td>
         </tr>
         <tr>
           <td class="archivo1"><u>Opcional</u> - Incorporar adicionalmente antecedentes relevantes de la iniciativa, que sea necesario agregar para su evaluación y análisis. <b>No agregar: CV completo</b></td>
           <td class="archivo1"></td>
-          <td class="archivo1"><input type="file" name="otros[]" id="otros[]" multiple="multiple"></td>
+          <td class="archivo1"><input type="file" name="archivo15" id="archivo15"></td>
         </tr>
         <tr>
           <td class="archivo1">Presentación de las bases del concurso 2019</td>
