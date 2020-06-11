@@ -110,49 +110,49 @@ echo "Datos almacenados punto 1-2 y 4";
 
 // 5. Anexos y archivos adjuntos
 
-$nombre=$_FILES['archivo1']['name'];
+$anexo_2=$_FILES['archivo1']['name'];
 $guardado=$_FILES['archivo1']['tmp_name'];
 
-$nombre2=$_FILES['archivo2']['name'];
+$anexo_3=$_FILES['archivo2']['name'];
 $guardado2=$_FILES['archivo2']['tmp_name'];
 
-$nombre3=$_FILES['archivo3']['name'];
+$grafico=$_FILES['archivo3']['name'];
 $guardado3=$_FILES['archivo3']['tmp_name'];
 
-$nombre4=$_FILES['archivo4']['name'];
+$objetivosEspecificos=$_FILES['archivo4']['name'];
 $guardado4=$_FILES['archivo4']['tmp_name'];
 
-$nombre5=$_FILES['archivo5']['name'];
+$anexo_6=$_FILES['archivo5']['name'];
 $guardado5=$_FILES['archivo5']['tmp_name'];
 
-$nombre6=$_FILES['archivo6']['name'];
+$presupuestoDetallado=$_FILES['archivo6']['name'];
 $guardado6=$_FILES['archivo6']['tmp_name'];
 
-$nombre7=$_FILES['archivo7']['name'];
+$resultadosEsperados=$_FILES['archivo7']['name'];
 $guardado7=$_FILES['archivo7']['tmp_name'];
 
-$nombre8=$_FILES['archivo8']['name'];
+$indicadoresEvaluación=$_FILES['archivo8']['name'];
 $guardado8=$_FILES['archivo8']['tmp_name'];
 
-$nombre9=$_FILES['archivo9']['name'];
+$cartaGantt=$_FILES['archivo9']['name'];
 $guardado9=$_FILES['archivo9']['tmp_name'];
 
-$nombre10=$_FILES['archivo10']['name'];
+$funcion_integrante=$_FILES['archivo10']['name'];
 $guardado10=$_FILES['archivo10']['tmp_name'];
 
-$nombre11=$_FILES['archivo11']['name'];
+$rolUnicoTributario=$_FILES['archivo11']['name'];
 $guardado11=$_FILES['archivo11']['tmp_name'];
 
-$nombre12=$_FILES['archivo12']['name'];
+$cedulaIdentidad=$_FILES['archivo12']['name'];
 $guardado12=$_FILES['archivo12']['tmp_name'];
 
-$nombre13=$_FILES['archivo13']['name'];
+$copiaSimpleInstrumento=$_FILES['archivo13']['name'];
 $guardado13=$_FILES['archivo13']['tmp_name'];
 
-$nombre14=$_FILES['archivo14']['name'];
+$cartaAutoridad=$_FILES['archivo14']['name'];
 $guardado14=$_FILES['archivo14']['tmp_name'];
 
-$nombre15=$_FILES['archivo15']['name'];
+$antecedentesRelevantes=$_FILES['archivo15']['name'];
 $guardado15=$_FILES['archivo15']['tmp_name'];
 
 
@@ -164,41 +164,41 @@ if(!file_exists('./proyectos/publicos/'.$id_proyecto)){
     //Consulta si se creo correctamente
 	if(file_exists('./proyectos/publicos/'.$id_proyecto)){
         //Mueve archivos a la ruta proyectos/publicos/id_proyecto.
-		if(move_uploaded_file($guardado, './proyectos/publicos/'.$id_proyecto.'/'.$nombre)){
+		if(move_uploaded_file($guardado, './proyectos/publicos/'.$id_proyecto.'/'.$anexo_2)){
             
-            move_uploaded_file($guardado2, './proyectos/publicos/'.$id_proyecto.'/'.$nombre2);
-            move_uploaded_file($guardado3, './proyectos/publicos/'.$id_proyecto.'/'.$nombre3);
-            move_uploaded_file($guardado4, './proyectos/publicos/'.$id_proyecto.'/'.$nombre4);
-            move_uploaded_file($guardado5, './proyectos/publicos/'.$id_proyecto.'/'.$nombre5);
-            move_uploaded_file($guardado6, './proyectos/publicos/'.$id_proyecto.'/'.$nombre6);
-            move_uploaded_file($guardado7, './proyectos/publicos/'.$id_proyecto.'/'.$nombre7);
-            move_uploaded_file($guardado8, './proyectos/publicos/'.$id_proyecto.'/'.$nombre8);
-            move_uploaded_file($guardado9, './proyectos/publicos/'.$id_proyecto.'/'.$nombre9);
-            move_uploaded_file($guardado10, './proyectos/publicos/'.$id_proyecto.'/'.$nombre10);
-            move_uploaded_file($guardado11, './proyectos/publicos/'.$id_proyecto.'/'.$nombre11);
-            move_uploaded_file($guardado12, './proyectos/publicos/'.$id_proyecto.'/'.$nombre12);
-            move_uploaded_file($guardado13, './proyectos/publicos/'.$id_proyecto.'/'.$nombre13);
-            move_uploaded_file($guardado14, './proyectos/publicos/'.$id_proyecto.'/'.$nombre14);
-            move_uploaded_file($guardado15, './proyectos/publicos/'.$id_proyecto.'/'.$nombre15);
+            move_uploaded_file($guardado2,  './proyectos/publicos/'.$id_proyecto.'/'.$anexo_3);
+            move_uploaded_file($guardado3,  './proyectos/publicos/'.$id_proyecto.'/'.$grafico);
+            move_uploaded_file($guardado4,  './proyectos/publicos/'.$id_proyecto.'/'.$objetivosEspecificos);
+            move_uploaded_file($guardado5,  './proyectos/publicos/'.$id_proyecto.'/'.$anexo_6);
+            move_uploaded_file($guardado6,  './proyectos/publicos/'.$id_proyecto.'/'.$presupuestoDetallado);
+            move_uploaded_file($guardado7,  './proyectos/publicos/'.$id_proyecto.'/'.$resultadosEsperados);
+            move_uploaded_file($guardado8,  './proyectos/publicos/'.$id_proyecto.'/'.$indicadoresEvaluación);
+            move_uploaded_file($guardado9,  './proyectos/publicos/'.$id_proyecto.'/'.$cartaGantt);
+            move_uploaded_file($guardado10, './proyectos/publicos/'.$id_proyecto.'/'.$funcion_integrante);
+            move_uploaded_file($guardado11, './proyectos/publicos/'.$id_proyecto.'/'.$rolUnicoTributario);
+            move_uploaded_file($guardado12, './proyectos/publicos/'.$id_proyecto.'/'.$cedulaIdentidad);
+            move_uploaded_file($guardado13, './proyectos/publicos/'.$id_proyecto.'/'.$copiaSimpleInstrumento);
+            move_uploaded_file($guardado14, './proyectos/publicos/'.$id_proyecto.'/'.$cartaAutoridad);
+            move_uploaded_file($guardado15, './proyectos/publicos/'.$id_proyecto.'/'.$antecedentesRelevantes);
             
             
             //Aqui debe subir ruta archivo
             
-            $ruta1 =     "./proyectos/publicos/$id_proyecto/$nombre";
-            $ruta2 =     "./proyectos/publicos/$id_proyecto/$nombre2";
-            $ruta3 =     "./proyectos/publicos/$id_proyecto/$nombre3";
-            $ruta4 =     "./proyectos/publicos/$id_proyecto/$nombre4";
-            $ruta5 =     "./proyectos/publicos/$id_proyecto/$nombre5";
-            $ruta6 =     "./proyectos/publicos/$id_proyecto/$nombre6";
-            $ruta7 =     "./proyectos/publicos/$id_proyecto/$nombre7";
-            $ruta8 =     "./proyectos/publicos/$id_proyecto/$nombre8";
-            $ruta9 =     "./proyectos/publicos/$id_proyecto/$nombre9";
-            $ruta10 =    "./proyectos/publicos/$id_proyecto/$nombre10";
-            $ruta11 =    "./proyectos/publicos/$id_proyecto/$nombre11";
-            $ruta12 =    "./proyectos/publicos/$id_proyecto/$nombre12";
-            $ruta13 =    "./proyectos/publicos/$id_proyecto/$nombre13";
-            $ruta14 =    "./proyectos/publicos/$id_proyecto/$nombre14";
-            $ruta15 =    "./proyectos/publicos/$id_proyecto/$nombre15";
+            $ruta1 =     "./proyectos/publicos/$id_proyecto/$anexo_2";
+            $ruta2 =     "./proyectos/publicos/$id_proyecto/$anexo_3";
+            $ruta3 =     "./proyectos/publicos/$id_proyecto/$grafico";
+            $ruta4 =     "./proyectos/publicos/$id_proyecto/$objetivosEspecificos";
+            $ruta5 =     "./proyectos/publicos/$id_proyecto/$anexo_6";
+            $ruta6 =     "./proyectos/publicos/$id_proyecto/$presupuestoDetallado";
+            $ruta7 =     "./proyectos/publicos/$id_proyecto/$resultadosEsperados";
+            $ruta8 =     "./proyectos/publicos/$id_proyecto/$indicadoresEvaluación";
+            $ruta9 =     "./proyectos/publicos/$id_proyecto/$cartaGantt";
+            $ruta10 =    "./proyectos/publicos/$id_proyecto/$funcion_integrante";
+            $ruta11 =    "./proyectos/publicos/$id_proyecto/$rolUnicoTributario";
+            $ruta12 =    "./proyectos/publicos/$id_proyecto/$cedulaIdentidad";
+            $ruta13 =    "./proyectos/publicos/$id_proyecto/$copiaSimpleInstrumento";
+            $ruta14 =    "./proyectos/publicos/$id_proyecto/$cartaAutoridad";
+            $ruta15 =    "./proyectos/publicos/$id_proyecto/$antecedentesRelevantes";
 
             
 
@@ -217,39 +217,41 @@ if(!file_exists('./proyectos/publicos/'.$id_proyecto)){
 }
 //Si existe la ruta, mueve directamente los archivos
 else{
-	if(move_uploaded_file($guardado, './proyectos/publicos/'.$id_proyecto.'/'.$nombre)){
+	if(move_uploaded_file($guardado, './proyectos/publicos/'.$id_proyecto.'/'.$anexo_2)){
         
-        move_uploaded_file($guardado2, './proyectos/publicos/'.$id_proyecto.'/'.$nombre2);
-        move_uploaded_file($guardado3, './proyectos/publicos/'.$id_proyecto.'/'.$nombre3);
-        move_uploaded_file($guardado4, './proyectos/publicos/'.$id_proyecto.'/'.$nombre4);
-        move_uploaded_file($guardado5, './proyectos/publicos/'.$id_proyecto.'/'.$nombre5);
-        move_uploaded_file($guardado6, './proyectos/publicos/'.$id_proyecto.'/'.$nombre6);
-        move_uploaded_file($guardado7, './proyectos/publicos/'.$id_proyecto.'/'.$nombre7);
-        move_uploaded_file($guardado8, './proyectos/publicos/'.$id_proyecto.'/'.$nombre8);
-        move_uploaded_file($guardado9, './proyectos/publicos/'.$id_proyecto.'/'.$nombre9);
-        move_uploaded_file($guardado10, './proyectos/publicos/'.$id_proyecto.'/'.$nombre10);
-        move_uploaded_file($guardado11, './proyectos/publicos/'.$id_proyecto.'/'.$nombre11);
-        move_uploaded_file($guardado12, './proyectos/publicos/'.$id_proyecto.'/'.$nombre12);
-        move_uploaded_file($guardado13, './proyectos/publicos/'.$id_proyecto.'/'.$nombre13);
-        move_uploaded_file($guardado14, './proyectos/publicos/'.$id_proyecto.'/'.$nombre14);
-        move_uploaded_file($guardado15, './proyectos/publicos/'.$id_proyecto.'/'.$nombre15);
+        
+        move_uploaded_file($guardado2,  './proyectos/publicos/'.$id_proyecto.'/'.$anexo_3);
+        move_uploaded_file($guardado3,  './proyectos/publicos/'.$id_proyecto.'/'.$grafico);
+        move_uploaded_file($guardado4,  './proyectos/publicos/'.$id_proyecto.'/'.$objetivosEspecificos);
+        move_uploaded_file($guardado5,  './proyectos/publicos/'.$id_proyecto.'/'.$anexo_6);
+        move_uploaded_file($guardado6,  './proyectos/publicos/'.$id_proyecto.'/'.$presupuestoDetallado);
+        move_uploaded_file($guardado7,  './proyectos/publicos/'.$id_proyecto.'/'.$resultadosEsperados);
+        move_uploaded_file($guardado8,  './proyectos/publicos/'.$id_proyecto.'/'.$indicadoresEvaluación);
+        move_uploaded_file($guardado9,  './proyectos/publicos/'.$id_proyecto.'/'.$cartaGantt);
+        move_uploaded_file($guardado10, './proyectos/publicos/'.$id_proyecto.'/'.$funcion_integrante);
+        move_uploaded_file($guardado11, './proyectos/publicos/'.$id_proyecto.'/'.$rolUnicoTributario);
+        move_uploaded_file($guardado12, './proyectos/publicos/'.$id_proyecto.'/'.$cedulaIdentidad);
+        move_uploaded_file($guardado13, './proyectos/publicos/'.$id_proyecto.'/'.$copiaSimpleInstrumento);
+        move_uploaded_file($guardado14, './proyectos/publicos/'.$id_proyecto.'/'.$cartaAutoridad);
+        move_uploaded_file($guardado15, './proyectos/publicos/'.$id_proyecto.'/'.$antecedentesRelevantes);
         
 
-        $ruta1 = "./proyectos/publicos/$id_proyecto/$nombre";
-        $ruta2 = "./proyectos/publicos/$id_proyecto/$nombre2";
-        $ruta3 = "./proyectos/publicos/$id_proyecto/$nombre3";
-        $ruta4 = "./proyectos/publicos/$id_proyecto/$nombre4";
-        $ruta5 = "./proyectos/publicos/$id_proyecto/$nombre5";
-        $ruta6 = "./proyectos/publicos/$id_proyecto/$nombre6";
-        $ruta7 = "./proyectos/publicos/$id_proyecto/$nombre7";
-        $ruta8 = "./proyectos/publicos/$id_proyecto/$nombre8";
-        $ruta9 = "./proyectos/publicos/$id_proyecto/$nombre9";
-        $ruta10 = "./proyectos/publicos/$id_proyecto/$nombre10";
-        $ruta11 = "./proyectos/publicos/$id_proyecto/$nombre11";
-        $ruta12 = "./proyectos/publicos/$id_proyecto/$nombre12";
-        $ruta13 = "./proyectos/publicos/$id_proyecto/$nombre13";
-        $ruta14 = "./proyectos/publicos/$id_proyecto/$nombre14";
-        $ruta15 = "./proyectos/publicos/$id_proyecto/$nombre15";
+            
+        $ruta1 =     "./proyectos/publicos/$id_proyecto/$anexo_2";
+        $ruta2 =     "./proyectos/publicos/$id_proyecto/$anexo_3";
+        $ruta3 =     "./proyectos/publicos/$id_proyecto/$grafico";
+        $ruta4 =     "./proyectos/publicos/$id_proyecto/$objetivosEspecificos";
+        $ruta5 =     "./proyectos/publicos/$id_proyecto/$anexo_6";
+        $ruta6 =     "./proyectos/publicos/$id_proyecto/$presupuestoDetallado";
+        $ruta7 =     "./proyectos/publicos/$id_proyecto/$resultadosEsperados";
+        $ruta8 =     "./proyectos/publicos/$id_proyecto/$indicadoresEvaluación";
+        $ruta9 =     "./proyectos/publicos/$id_proyecto/$cartaGantt";
+        $ruta10 =    "./proyectos/publicos/$id_proyecto/$funcion_integrante";
+        $ruta11 =    "./proyectos/publicos/$id_proyecto/$rolUnicoTributario";
+        $ruta12 =    "./proyectos/publicos/$id_proyecto/$cedulaIdentidad";
+        $ruta13 =    "./proyectos/publicos/$id_proyecto/$copiaSimpleInstrumento";
+        $ruta14 =    "./proyectos/publicos/$id_proyecto/$cartaAutoridad";
+        $ruta15 =    "./proyectos/publicos/$id_proyecto/$antecedentesRelevantes";
 
         $sqlAnexos = "INSERT INTO anexos(id, id_proyecto, anexo_2, anexo_3, grafico_imagen, objetivos_especificos, anexo_6, presupuesto_detallado, resultados_esperados, indicador_evaluacion, carta_gantt, funcion_integrantes, copia_rol_tributario, copia_cedula_identidad, copia_instrumento, carta_autoridad, antecedentes_relevantes, copia_certificado_vigencia) 
         VALUES('', '$id_proyecto', '$ruta1', '$ruta2', '$ruta3', '$ruta4', '$ruta5', '$ruta6', '$ruta7', '$ruta8', '$ruta9', '$ruta10', '$ruta11', '$ruta12', '$ruta13', '$ruta14', '$ruta15', '')";
@@ -263,5 +265,89 @@ else{
 	}
 }
 
+// PDF
 
+$tipo_institucion = "Publico";
+
+$nuevo_path="../php/proyectos/publicos/".$id_proyecto;
+				
+        require('../fpdf/fpdf.php');
+        class PDF extends FPDF
+        {
+        // Cabecera de página
+        function Header()
+        {   
+            $this->Ln(10);
+             
+        }
+        
+        // Pie de página
+        function Footer()
+        {
+            // Posición: a 1,5 cm del final
+            $this->SetY(-15);
+            // Arial italic 8
+            $this->SetFont('Arial','I',8);
+            // Número de página
+        }
+        }
+        // Creación del objeto de la clase heredada
+        //$nombre_proy="hola"; 
+        $hoy = date("j/n/Y");
+        $pdf = new PDF();
+        $pdf->AddPage();
+        //$pdf->Image('img/logo.jpg',10,8,33);
+        $pdf->SetFont('Arial','B',9);
+        $pdf->Cell(0,5,utf8_decode('ACUSE DE RECIBO DE POSTULACIÓN'),0,1,'C');
+        $pdf->Cell(0,5,utf8_decode('FONDO DE INNOVACION PARA LA COMPETITIVIDAD (FIC) 2019'),0,1,'C');
+        $pdf->Cell(0,5,utf8_decode('N°'.$id_proyecto),0,1,'C');
+        $pdf->Cell(0,5,utf8_decode('Fecha: '.$hoy),0,1,'C');
+        $pdf->SetTextColor(1,108,190);
+        $pdf->SetFont('Arial','B',15);
+        $pdf->Cell(0,20,utf8_decode('CONTENIDO DE POSTULACIÓN'),0,1);
+        $pdf->SetFont('Arial','',11);
+        $pdf->SetTextColor(1,108,190);
+        $pdf->MultiCell(0,5,utf8_decode('Nombre de proyecto: '.$nombreProyecto),0,1);
+        $pdf->SetTextColor(0,0,0);
+        $pdf->Cell(0,5,utf8_decode('____________________________________________________________________________'),0,1);
+        $pdf->SetTextColor(1,108,190);
+        $pdf->MultiCell(0,10,utf8_decode('Nombre de la entidad postulante: '.$nombreEntidad),0,1);
+        $pdf->SetTextColor(0,0,0);
+        $pdf->Cell(0,5,utf8_decode('____________________________________________________________________________'),0,1);
+        $pdf->SetTextColor(1,108,190);
+        $pdf->MultiCell(0,10,utf8_decode('Coordinador responsable del proyecto: '.$nombreCoordinador),0,1);
+        $pdf->SetTextColor(0,0,0);
+        $pdf->Cell(0,5,utf8_decode('____________________________________________________________________________'),0,1);
+        $pdf->SetTextColor(1,108,190);
+        $pdf->MultiCell(0,10,utf8_decode('Representante legal de la institución: '.$nombreRepresentante),0,1);
+        $pdf->SetTextColor(0,0,0);
+        $pdf->Cell(0,5,utf8_decode('____________________________________________________________________________'),0,1);
+        $pdf->SetTextColor(1,108,190);
+        $pdf->Cell(0,10,utf8_decode('Tipo de proyecto: '.$tipo_institucion),0,1);
+        $pdf->SetTextColor(0,0,0);
+        $pdf->Cell(0,5,utf8_decode('____________________________________________________________________________'),0,1);
+        $pdf->SetTextColor(1,108,190);
+        $pdf->Cell(0,10,utf8_decode('ARCHIVOS ADJUNTOS'),0,1);
+        $pdf->SetTextColor(0,0,0);
+        $pdf->MultiCell(0,5,utf8_decode(' - Presupuesto: '.$presupuestoDetallado),0,1);
+        $pdf->MultiCell(0,5,utf8_decode(' - Resultados Esperados: '.$resultadosEsperados),0,1);
+        $pdf->MultiCell(0,5,utf8_decode(' - Eval. Ex-Ante: '.$indicadoresEvaluación),0,1);
+        $pdf->MultiCell(0,5,utf8_decode(' - Carta Gantt: '.$cartaGantt),0,1);
+        $pdf->MultiCell(0,5,utf8_decode(' - Función Integrantes: '.$funcion_integrante),0,1);
+        $pdf->MultiCell(0,5,utf8_decode(' - Anexo 2: '.$anexo_2),0,1);
+        $pdf->MultiCell(0,5,utf8_decode(' - Anexo 3: '.$anexo_3),0,1);
+        $pdf->MultiCell(0,5,utf8_decode(' - Anexo 4.2: '.$grafico),0,1);
+        $pdf->MultiCell(0,5,utf8_decode(' - Anexo 4.4: '.$objetivosEspecificos),0,1);
+        $pdf->MultiCell(0,5,utf8_decode(' - Rol Único Tributario de la Entidad Postulante: '.$rolUnicoTributario),0,1);
+        $pdf->MultiCell(0,5,utf8_decode(' - Cédula de Identidad del Representante Legal o Mandatario: '.$cedulaIdentidad),0,1);
+        $pdf->MultiCell(0,5,utf8_decode(' - Instrumento que Nombra al Representante Legal o Mandatario: '.$copiaSimpleInstrumento),0,1);
+        $pdf->Cell(0,10,utf8_decode('Este comprobante certifica su postulación online.'),0,1);
+        $pdf->Cell(0,0,utf8_decode(''),0,1);
+        $pdf->MultiCell(0,5,utf8_decode('Es importante considerar que la documentación adjunta en la postulación, su información y contenido, es de exclusiva responsabilidad de la entidad postulante del proyecto y debe cumplir con lo exigido en las presentes bases. '),0,1);
+        $pdf->Cell(0,5,utf8_decode('No obstante, esta será sometida al proceso de admisibilidad, donde se verificará que el contenido'),0,1);
+        $pdf->Cell(0,5,utf8_decode('corresponda a lo solicitado. De no cumplirse esta condición la iniciativa se considerará inadmisible.'),0,1);
+        //$pdf->Image('../img/ie.jpeg',165,250,38,38,'JPEG', '');
+        //$pdf->Image('../img/f.jpeg',10,289,38,33,'JPEG', '');
+        $pdf->Output($nuevo_path.'/ComprobanteFIC.pdf', 'F');       
+        
 ?>

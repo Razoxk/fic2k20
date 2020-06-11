@@ -1,6 +1,6 @@
 <?php 
 
-$nuevo_path="/home/pelfic/data/".$id."/comprobante/";
+$nuevo_path="./php/proyectos/publicos/".$id_proyecto."/comprobante/";
 				//CREA CARPETA OBJ_ESPECIFICO
 				if (!file_exists('/home/pelfic/data/'.$id.'/comprobante')) {
 				mkdir('/home/pelfic/data/'.$id.'/comprobante', 0777, true);

@@ -456,12 +456,12 @@
 
 
                     <h4>4.5 Resultados Esperados e Indicadores de Resultados</h4>
-                    <div class="row container pb-5"><h6 class="pt-1">La descarga y subida de los "Objetivos Específicos" se ubica aquí</h6><a class="pl-4" href="src/anexos/resultados_esperados.xlsx" download="resultados_esperados.xlsx"> Descargar</a>
-                   <input class="pl-4" required="" type="file" name="archivo8" id="archivo8">
+                    <div class="row container pb-5"><h6 class="pt-1">La descarga y subida de los "Resultados Esperados e Indicadores de Resultados" se ubica aquí</h6><a class="pl-4" href="src/anexos/resultados_esperados.xlsx" download="resultados_esperados.xlsx"> Descargar</a>
+                   <input class="pl-4" required="" type="file" name="archivo7" id="archivo7">
                    </div>
                     <h4>4.6 Indicadores de Evaluación Ex-ante</h4>
                     <div class="row container pb-5"><h6 class="pt-1">La descarga y subida de los "Indicadores de evaluación Ex-ante" se ubica aquí</h6><a class="pl-4" href="src/anexos/indicadores_evaluacion_ex-ante.xlsx" download="indicadores_evaluacion_ex-ante.xlsx"> Descargar</a>
-                   <input class="pl-4" required="" type="file" name="archivo9" id="archivo9">
+                   <input class="pl-4" required="" type="file" name="archivo8" id="archivo8">
                    </div>
                     <h4>4.7 Beneficiarios Directos</h4>
                     <h6 class="alert alert-primary">(Consistente con los resultados esperados del proyecto)</h6>                
@@ -550,7 +550,6 @@
           <td class="archivo1"></td>
           <td class="archivo1"><input type="file" name="archivo3" id="archivo3" multiple="multiple"></td>
         </tr>
-      
         <tr>
           <td class="archivo1">Anexo 6 - Formato de Carta Compromiso Costos de Operación Post Proyecto</td>
           <td class="archivo1"><a href="bajaranexo6.php" target="_blank">Descargar</a></td>
@@ -560,10 +559,6 @@
           <td class="archivo1">Presupuesto detallado del proyecto</td>
           <td class="archivo1"><a href="bajarpresu.php" target="_blank">Descargar</a></td>
           <td class="archivo1"><input required="" type="file" name="archivo6" id="archivo6"></td>
-        </tr><tr>
-          <td class="archivo1">Resultados Esperados e Indicadores de Resultados</td>
-          <td class="archivo1"><a href="bajar45.php" target="_blank">Descargar</a></td>
-          <td class="archivo1"><input required="" type="file" name="archivo7" id="archivo7"></td>
         </tr>
         <tr>
           <td class="archivo1">Función de cada integrante del proyecto y horas dedicadas</td>
