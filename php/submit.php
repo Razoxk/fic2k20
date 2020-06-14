@@ -349,5 +349,52 @@ $nuevo_path="../php/proyectos/publicos/".$id_proyecto;
         //$pdf->Image('../img/ie.jpeg',165,250,38,38,'JPEG', '');
         //$pdf->Image('../img/f.jpeg',10,289,38,33,'JPEG', '');
         $pdf->Output($nuevo_path.'/ComprobanteFIC.pdf', 'F');       
+  
+        session_start();
+
+
+        $_SESSION["comprobante"] = $nuevo_path.'/ComprobanteFIC.pdf';
+
         
+        // Llamando a los campos
+        $nombreCoordinador = $_POST['nombre'];
+        $correo = $_POST['correo'];
+        $telefono = $_POST['telefono'];
+        
+        $mensajeCoordinador = "Sr(a): $nombreCoordinador de rut $rutCoordinador y correo $emailCoordinador \n;  
+        Le informamos que su postulación con nombre $nombreProyecto, ha sido ingresada exitosamente al sistema \n; 
+        El número identificador de su postulación es $id_proyecto \n;
+        Saludos!";
+        $mensajeRepresentante = "Sr(a): $nombreRepresentante de rut $rutRepresentante y correo $emailRepresentante \n;  
+        Le informamos que su postulación con nombre $nombreProyecto, ha sido ingresada exitosamente al sistema \n; 
+        El número identificador de su postulación es $id_proyecto \n;
+        Saludos!";
+        $mensajeEvaluador = "Sr(a): $nombreCoordinador de rut $rutCoordinador y correo $emailCoordinador \n;  
+        Le informamos que su postulación con nombre $nombreProyecto, ha sido ingresada exitosamente al sistema \n; 
+        El número identificador de su postulación es $id_proyecto \n;
+        Saludos!"
+
+        // Datos para el correo
+        $destinatario = "pablo.orellanaub@gmail.com";
+        $asunto = "Comprobante postulación FIC 2020";
+
+        $cartaCoordinador = $mensajeCoordinador;
+        
+        $cartaRepresentante = $mensajeRepresentante;
+
+        
+        $cartaRepresentante = "De: $nombreCoordinador \n";
+        $cartaRepresentante .= "Correo: $correo \n";
+        $cartaRepresentante .= "Telefono: $telefono \n";
+        $cartaRepresentante .= "Mensaje: $mensaje";
+
+        // Enviando Mensaje Coordinador
+        mail($correopostulante, $asunto, $cartaCoordinador);
+        // Enviando Mensaje Representante
+        mail($correopostulante, $asunto, $cartaRepresentante);
+        // Enviando Mensaje a evaluador (alguien del gobierno)
+        mail($destinatario, $asunto, $mensajeEvaluador);
+        
+
+        header('Location: completed.php');
 ?>
