@@ -14,7 +14,102 @@ gtag('config', 'UA-143678818-3');
 <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
 <link href="css/font-awesome.min.css" rel="stylesheet">
+<<<<<<< HEAD
+  <script language="JavaScript" type="text/JavaScript">
+  var cont=0;
+  var conta=0;
+  var contr=0;
+  var cproy=0;
+  var cproya=0;
+  var cproyr=0;
+  function ind(){
+          $("#logran").each(function() {
+              window.location="index.php";
+          });
+  }
+  function indpost(){
+          $("#logran").each(function() {
+               document.getElementById("menuar").innerHTML="";
+          });
+  }
+  function registro(){
+          $("<DIV>").load("prepostulacion-1.php", function() {
+              $("#main").empty();
+              $("#main").append($(this).html());
+          });
+  }
+  function postulacion(){
+          window.location="postulaciones.php";
+  }
+  function prepostulacion1(){
+          $("<DIV>").load("prepostulacion-2.php", function() {
+              var rrep = $("#txtrutrepresentante").val();
+              var remp = $("#txtrutempresa").val();
+              var cla = $("#txtcontraseña").val();
+              $("#main").empty();
+              $("#main").append($(this).html());
+              $("#main").load('prepostulacion-2.php', {rutrep:rrep, rutemp:remp, clave:cla});
+  });
+      }
+      function prepostulacion2(rut, cor, nr, apr, amr, nmr, ne, ge, de, a1, a2){	
+      var rutp =rut;
+      var corr =cor;
+          $.post("prepostulacion-2.php", { rutpre : rutp, corpre : corr, nomr : nr, appr : apr, apmr : amr, numr : nmr, nome: ne, gire : ge, dire: de, arc1 : a1, arc2 : a2},
+          function(data) {
+          $("#main").html(data);
+      });
+      }
+  function evapostulacion(){
+      $("<DIV>").load("evapost.php", function() {
+          $("#main").empty();
+          $("#main").append($(this).html());
+      });
+      
+  }
+  function evaproyectos(){
+      $("<DIV>").load("evaproy.php", function() {
+          $("#main").empty();
+          $("#main").append($(this).html());
+      });
+      
+  }
+      function panadm(){
+          $("<DIV>").load("admin.php", function() {
+              $("#main").empty();
+              $("#main").append($(this).html());
+          });
+      
+      }
+      function ingreso(){
+          $("<DIV>").load("postulante.php", function() {
+              $("#main").empty();
+              $("#main").append($(this).html());
+          });
+      
+      }
+      function reingreso(){
+          $("<DIV>").load("repostulacion.php", function() {
+              $("#main").empty();
+              $("#main").append($(this).html());
+          });
+      
+      }
+      function fram(rut){
+      $.post("preframe.php", { rusu : rut},
+      function(data) {
+          $("#pframe").html(data);
+      });
+  };
+  function rel(){
+      $("<DIV>").load("postulacion.php", function() {
+              $("#main").empty();
+              $("#main").append($(this).html());
+          });
+  }
+  </script>
+=======
   
+>>>>>>> 00e6ba1fe1d895ef6de62dbd445877a424a3cd4f
   <script src="jquery-1.4.2.min.js" type="text/javascript"></script> 
   <script src="jquery.Rut.js" type="text/javascript"></script>
   <script type="text/javascript">

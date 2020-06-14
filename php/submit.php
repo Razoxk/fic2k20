@@ -349,11 +349,13 @@ $nuevo_path="../php/proyectos/publicos/".$id_proyecto;
         //$pdf->Image('../img/ie.jpeg',165,250,38,38,'JPEG', '');
         //$pdf->Image('../img/f.jpeg',10,289,38,33,'JPEG', '');
         $pdf->Output($nuevo_path.'/ComprobanteFIC.pdf', 'F');       
+
   
         session_start();
 
 
         $_SESSION["comprobante"] = $nuevo_path.'/ComprobanteFIC.pdf';
+
 
         
         // Llamando a los campos
@@ -397,4 +399,8 @@ $nuevo_path="../php/proyectos/publicos/".$id_proyecto;
         
 
         header('Location: completed.php');
+
+        header('Location: completed.php');
+
+
 ?>
