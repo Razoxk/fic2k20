@@ -1,5 +1,5 @@
 <?php 
-
+error_reporting(0);
 include 'db.php';
 
 $nombreProyecto = $_POST['nombreProyecto'];
@@ -72,7 +72,7 @@ VALUES ('', '$id_proyecto','$estadoArte')";
 $conn->query($sqlEstadoarte);
 
 
-echo "Id creado para el proyecto: ".$id_proyecto;
+//echo "Id creado para el proyecto: ".$id_proyecto;
 
 
 //4 - Descripción de la Propuesta Técnica y Metodológica
@@ -106,7 +106,7 @@ $conn->query($sqlDescripcion);
 
 
 
-echo "Datos almacenados punto 1-2 y 4";
+//echo "Datos almacenados punto 1-2 y 4";
 
 // 5. Anexos y archivos adjuntos
 
@@ -206,12 +206,12 @@ if(!file_exists('./proyectos/publicos/'.$id_proyecto)){
                 VALUES('', '$id_proyecto', '$ruta1', '$ruta2', '$ruta3', '$ruta4', '$ruta5', '$ruta6', '$ruta7', '$ruta8', '$ruta9', '$ruta10', '$ruta11', '$ruta12', '$ruta13', '$ruta14', '$ruta15', '')";
             $conn->query($sqlAnexos);
 
-            echo "Archivos y rutas subidas con exito";
+            //echo "Archivos y rutas subidas con exito";
 
             print_r($sqlAnexos);
 
 		}else{
-			echo "Archivo no se pudo guardar";
+			//echo "Archivo no se pudo guardar";
 		}
     }
 }
@@ -257,11 +257,11 @@ else{
         VALUES('', '$id_proyecto', '$ruta1', '$ruta2', '$ruta3', '$ruta4', '$ruta5', '$ruta6', '$ruta7', '$ruta8', '$ruta9', '$ruta10', '$ruta11', '$ruta12', '$ruta13', '$ruta14', '$ruta15', '')";
         $conn->query($sqlAnexos);
 
-        echo "Archivo guardado con exito";
+        //echo "Archivo guardado con exito";
 
 
 	}else{
-		echo "Archivo no se pudo guardar";
+		//echo "Archivo no se pudo guardar";
 	}
 }
 
@@ -355,52 +355,116 @@ $nuevo_path="../php/proyectos/publicos/".$id_proyecto;
 
 
         $_SESSION["comprobante"] = $nuevo_path.'/ComprobanteFIC.pdf';
+        
 
 
         
         // Llamando a los campos
-        $nombreCoordinador = $_POST['nombre'];
-        $correo = $_POST['correo'];
-        $telefono = $_POST['telefono'];
         
-        $mensajeCoordinador = "Sr(a): $nombreCoordinador de rut $rutCoordinador y correo $emailCoordinador \n;  
-        Le informamos que su postulación con nombre $nombreProyecto, ha sido ingresada exitosamente al sistema \n; 
-        El número identificador de su postulación es $id_proyecto \n;
-        Saludos!";
-        $mensajeRepresentante = "Sr(a): $nombreRepresentante de rut $rutRepresentante y correo $emailRepresentante \n;  
-        Le informamos que su postulación con nombre $nombreProyecto, ha sido ingresada exitosamente al sistema \n; 
-        El número identificador de su postulación es $id_proyecto \n;
-        Saludos!";
-        $mensajeEvaluador = "Sr(a): $nombreCoordinador de rut $rutCoordinador y correo $emailCoordinador \n;  
-        Le informamos que su postulación con nombre $nombreProyecto, ha sido ingresada exitosamente al sistema \n; 
-        El número identificador de su postulación es $id_proyecto \n;
-        Saludos!"
+        // $correo = $_POST['correo'];
+        // $telefono = $_POST['telefono'];
+        
+       
 
+        // Llamando a los campos
+        $nombreCoordinador = $_POST['nombreCoordinador'];
+        $emailCoordinador = $_POST['emailCoordinador'];
+        $emailRepresentante = $_POST['emailRepresentante'];
+        $id_proyecto;
+        
+        
         // Datos para el correo
         $destinatario = "pablo.orellanaub@gmail.com";
-        $asunto = "Comprobante postulación FIC 2020";
-
-        $cartaCoordinador = $mensajeCoordinador;
+        $asunto = "POSTULACION FIC 2K20 ";
         
-        $cartaRepresentante = $mensajeRepresentante;
-
+        $carta = "Sr(a): $nombreCoordinador con RUT $rutCoordinador y correo $emailCoordinador \n";
+        $carta .= "Le informamos que su postulacion con nombre $nombreProyecto, ha sido ingresado exitosamente al sistema, en el transcurso de los días se le informará por este medio el resultado de su postulación \n";
+        $carta .= "El número identificador de su postulación es : $id_proyecto \n";
+        $carta .= "Saludos!";
         
-        $cartaRepresentante = "De: $nombreCoordinador \n";
-        $cartaRepresentante .= "Correo: $correo \n";
-        $cartaRepresentante .= "Telefono: $telefono \n";
-        $cartaRepresentante .= "Mensaje: $mensaje";
-
-        // Enviando Mensaje Coordinador
-        mail($correopostulante, $asunto, $cartaCoordinador);
+        // Enviando Mensaje Postulante
+        mail($emailCoordinador, $asunto, $carta);
         // Enviando Mensaje Representante
-        mail($correopostulante, $asunto, $cartaRepresentante);
+        mail($emailRepresentante, $asunto, $carta);
         // Enviando Mensaje a evaluador (alguien del gobierno)
-        mail($destinatario, $asunto, $mensajeEvaluador);
+        mail($destinatario, $asunto, $carta);
+            
         
 
-        header('Location: completed.php');
+      
 
-        header('Location: completed.php');
+        //header('Location: completed.php');
 
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="../js/main.js"></script>
+    <link rel="icon" type="image/jpg" href="../src/logoblanco.jpg">
+    <title>Formulario de postulación - Ingresado correctamente</title>
+    <style>
+      .ctitulo {
+        color: white;
+      }
+
+      .ctitulo2 {
+        color: white;
+        background: #006CB7;
+        padding-left: 0.3%;
+      }
+
+      .gg1 {
+        border-width: 1px;
+        color: white;
+        background-color: #006CB7;
+      }
+      .archivo1{
+        border-color: #ffffff; border-width: 1px; background-color: #e5e5e5; border-style: solid;
+      }
+    </style>
+</head>
+<body>
+<table width="100%" border="0" cellpadding="2" cellspacing="0">
+      <tr bgcolor="#006CB7" class="header">
+        <td class="pl-2" width="130"><a href="index.php"><img src="../src/logoblanco.jpg" width="150" height="150" /></a></td>
+        <td colspan="3" valign="middle" class="ctitulo">
+          <h2>Formulario Postulaci&oacuten FIC - Institución Pública</h2>
+          <h3>Divisi&oacuten de Fomento e Industria<br>Gobierno Regional de O'Higgins</h3>
+        </td>
+        <td width="15%" align="right" valign="bottom">
+          <p><br>
+            <!--Version v.1.0<br>Actualizado al 02/06/2020 09:46:55
+          </p>-->
+        </td>
+      </tr>
+    </table>
+    <hr align="center" width="75%" noshade="noshade">
+    <div class="container">
+        <div class="alert alert-success" role="alert">
+            Su proyecto se ha ingresado correctamente, puede descargar su comprobante <a href="<?php echo $_SESSION["comprobante"]; ?>" class="alert-link">Aquí</a>. El proyecto sera revisado por el personal encargado.
+        </div>
+        <?php 
+
+            
+            
+            
+            
+        ?>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col pl-4"><a class="btn btn-primary" href="../index.html"><i class="fas fa-cloud"></i> Volver</a></div>
+          <div class="col"></div>
+        </div>
+        
+    </div>
+</body>
+</html>
