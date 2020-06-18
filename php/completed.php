@@ -55,7 +55,7 @@
     <hr align="center" width="75%" noshade="noshade">
     <div class="container">
         <div class="alert alert-success" role="alert">
-            Su proyecto se ha ingresado correctamente, puede descargar su comprobante <a href="<?php echo $_SESSION["comprobante"]; ?>" class="alert-link">Aquí</a>. El proyecto sera revisado por el personal encargado.
+            Suuuuuuuuuuuuuuuuuuuuuuuu proyecto se ha ingresado correctamente, puede descargar su comprobante <a href="<?php echo $_SESSION["comprobante"]; ?>" class="alert-link">Aquí</a>. El proyecto sera revisado por el personal encargado.
         </div>
         <?php 
 

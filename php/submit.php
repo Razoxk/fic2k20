@@ -208,7 +208,7 @@ if(!file_exists('./proyectos/publicos/'.$id_proyecto)){
 
             //echo "Archivos y rutas subidas con exito";
 
-            print_r($sqlAnexos);
+            //print_r($sqlAnexos);
 
 		}else{
 			//echo "Archivo no se pudo guardar";
@@ -296,10 +296,10 @@ $nuevo_path="../php/proyectos/publicos/".$id_proyecto;
         $hoy = date("j/n/Y");
         $pdf = new PDF();
         $pdf->AddPage();
-        //$pdf->Image('img/logo.jpg',10,8,33);
+        $pdf->Image('../img/logo.jpg',10,8,33);//
         $pdf->SetFont('Arial','B',9);
         $pdf->Cell(0,5,utf8_decode('ACUSE DE RECIBO DE POSTULACIÓN'),0,1,'C');
-        $pdf->Cell(0,5,utf8_decode('FONDO DE INNOVACION PARA LA COMPETITIVIDAD (FIC) 2019'),0,1,'C');
+        $pdf->Cell(0,5,utf8_decode('FONDO DE INNOVACION PARA LA COMPETITIVIDAD (FIC) 2020'),0,1,'C');
         $pdf->Cell(0,5,utf8_decode('N°'.$id_proyecto),0,1,'C');
         $pdf->Cell(0,5,utf8_decode('Fecha: '.$hoy),0,1,'C');
         $pdf->SetTextColor(1,108,190);
@@ -346,8 +346,8 @@ $nuevo_path="../php/proyectos/publicos/".$id_proyecto;
         $pdf->MultiCell(0,5,utf8_decode('Es importante considerar que la documentación adjunta en la postulación, su información y contenido, es de exclusiva responsabilidad de la entidad postulante del proyecto y debe cumplir con lo exigido en las presentes bases. '),0,1);
         $pdf->Cell(0,5,utf8_decode('No obstante, esta será sometida al proceso de admisibilidad, donde se verificará que el contenido'),0,1);
         $pdf->Cell(0,5,utf8_decode('corresponda a lo solicitado. De no cumplirse esta condición la iniciativa se considerará inadmisible.'),0,1);
-        //$pdf->Image('../img/ie.jpeg',165,250,38,38,'JPEG', '');
-        //$pdf->Image('../img/f.jpeg',10,289,38,33,'JPEG', '');
+        $pdf->Image('../img/ie.jpeg',165,250,38,38,'JPEG', ''); //
+        $pdf->Image('../img/f.jpeg',10,289,38,33,'JPEG', ''); //
         $pdf->Output($nuevo_path.'/ComprobanteFIC.pdf', 'F');       
 
   
@@ -373,21 +373,70 @@ $nuevo_path="../php/proyectos/publicos/".$id_proyecto;
         $id_proyecto;
         
         
-        // Datos para el correo
+         //ENVIO DE CORREO A INSITUCION POSTULANTE
         $destinatario = "pablo.orellanaub@gmail.com";
-        $asunto = "POSTULACION FIC 2K20 ";
-        
+        $asunto = "POSTULACION FIC 2020";
         $carta = "Sr(a): $nombreCoordinador con RUT $rutCoordinador y correo $emailCoordinador \n";
         $carta .= "Le informamos que su postulacion con nombre $nombreProyecto, ha sido ingresado exitosamente al sistema, en el transcurso de los días se le informará por este medio el resultado de su postulación \n";
         $carta .= "El número identificador de su postulación es : $id_proyecto \n";
-        $carta .= "Saludos!";
+        $carta .= "Nombre de proyecto: $nombreProyecto \n";
+        $carta .= "Nombre de la entidad postulante: $nombreEntidad \n";
+        $carta .= "Coordinador responsable del proyecto: $nombreCoordinador \n";
+        $carta .= "Representante legal de la institución: $nombreRepresentante \n";
+        $carta .= "Tipo de proyecto: $tipo_institucion \n\n";
+        $carta .= " - Archivos adjuntos: \n";
+        $carta .= " - Presupuesto: $presupuestoDetallado \n";
+        $carta .= " - Resultados Esperados: $resultadosEsperados) \n";
+        $carta .= " - Eval. Ex-Ante: $indicadoresEvaluación \n";
+        $carta .= " - Carta Gantt: $cartaGantt \n";
+        $carta .= " - Función Integrantes: $funcion_integrante \n";
+        $carta .= " - Anexo 2: $anexo_2 \n";
+        $carta .= " - Anexo 3: $anexo_3 \n";
+        $carta .= " - Anexo 4.2:.$grafico \n";
+        $carta .= " - Anexo 4.4: $objetivosEspecificos \n";
+        $carta .= " - Rol Único Tributario de la Entidad Postulante: $rolUnicoTributario \n";
+        $carta .= " - Cédula de Identidad del Representante Legal o Mandatario: $cedulaIdentidad \n";
+        $carta .= " - Instrumento que Nombra al Representante Legal o Mandatario: $copiaSimpleInstrumento) \n\n";
+        $carta .= "   Este comprobante certifica su postulación online. \n";
+        $carta .= "Es importante considerar que la documentación adjunta en la postulación, su información y contenido, es deexclusiva responsabilidad de la entidad postulante del proyecto y debe cumplir con lo exigido en laspresentes bases. No obstante, esta será sometida al proceso de admisibilidad, donde se verificará que el contenidocorresponda a lo solicitado. De no cumplirse esta condición la iniciativa se considerará inadmisibl \n\n";
+        $carta .= "Saludos! \n\n";
+
+
+        //ENVIO DE CORREO A PERSONAL DEL GORE PARA SU POSTULACION
+        $asunto2="NUEVA POSTULACION REGISTRADA EN EL SISTEMA";
+        $gore  = "Nueva postulación realizada por: \n ";
+        $gore .= "Sr(a): $nombreCoordinador con RUT $rutCoordinador y correo $emailCoordinador \n";
+        $gore .= "El número identificador de su postulación es : $id_proyecto \n";    
+        $gore .= "Nombre de proyecto: $nombreProyecto \n";
+        $gore .= "Nombre de la entidad postulante: $nombreEntidad \n";
+        $gore .= "Coordinador responsable del proyecto: $nombreCoordinador \n";
+        $gore .= "Representante legal de la institución: $nombreRepresentante \n";
+        $gore .= "Tipo de proyecto: $tipo_institucion \n\n";
+        $gore .= " - Archivos adjuntos: \n";
+        $gore .= " - Presupuesto: $presupuestoDetallado \n";
+        $gore .= " - Resultados Esperados: $resultadosEsperados) \n";
+        $gore .= " - Eval. Ex-Ante: $indicadoresEvaluación \n";
+        $gore .= " - Carta Gantt: $cartaGantt \n";
+        $gore .= " - Función Integrantes: $funcion_integrante \n";
+        $gore .= " - Anexo 2: $anexo_2 \n";
+        $gore .= " - Anexo 3: $anexo_3 \n";
+        $gore .= " - Anexo 4.2:.$grafico \n";
+        $gore .= " - Anexo 4.4: $objetivosEspecificos \n";
+        $gore .= " - Rol Único Tributario de la Entidad Postulante: $rolUnicoTributario \n";
+        $gore .= " - Cédula de Identidad del Representante Legal o Mandatario: $cedulaIdentidad \n";
+        $gore .= " - Instrumento que Nombra al Representante Legal o Mandatario: $copiaSimpleInstrumento) \n\n";
+        $gore .= "   Este comprobante certifica su postulación online. \n";
+
+        $gore .= "Es importante considerar que la documentación adjunta en la postulación, su información y contenido, es deexclusiva responsabilidad de la entidad postulante del proyecto y debe cumplir con lo exigido en laspresentes bases. No obstante, esta será sometida al proceso de admisibilidad, donde se verificará que el contenidocorresponda a lo solicitado. De no cumplirse esta condición la iniciativa se considerará inadmisibl \n\n";
+
+        $gore .= "Saludos! \n\n";
         
         // Enviando Mensaje Postulante
         mail($emailCoordinador, $asunto, $carta);
         // Enviando Mensaje Representante
         mail($emailRepresentante, $asunto, $carta);
         // Enviando Mensaje a evaluador (alguien del gobierno)
-        mail($destinatario, $asunto, $carta);
+        mail($destinatario, $asunto2, $gore);
             
         
 
@@ -400,8 +449,8 @@ $nuevo_path="../php/proyectos/publicos/".$id_proyecto;
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -450,7 +499,7 @@ $nuevo_path="../php/proyectos/publicos/".$id_proyecto;
     <hr align="center" width="75%" noshade="noshade">
     <div class="container">
         <div class="alert alert-success" role="alert">
-            Su proyecto se ha ingresado correctamente, puede descargar su comprobante <a href="<?php echo $_SESSION["comprobante"]; ?>" class="alert-link">Aquí</a>. El proyecto sera revisado por el personal encargado.
+            Saaaaaaaaaaaaaaaaaaaaaaaaaaaa proyecto se ha ingresado correctamente, puede descargar su comprobante <a href="<?php echo $_SESSION["comprobante"]; ?>" class="alert-link">Aquí</a>. El proyecto sera revisado por el personal encargado.
         </div>
         <?php 
 

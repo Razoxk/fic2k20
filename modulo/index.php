@@ -1,18 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-    <title>Inicio</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css"> 
+	<link rel="stylesheet" type="text/css" href="css/estilo.css"> 
+	<title>DATATABLES</title>
 </head>
 <body>
-    <div class="container">
-        
-        <div class="jumbotron">
-            <h1>Modulo</h1>
-        </div>
-    </div>
+
+<section class="principal">
+
+	<h1>BUSQUEDA DE JUGADORES</h1>
+
+	<div class="formulario container">
+		<label for="caja_busqueda">Buscar</label>
+		<input type="text" name="caja_busqueda" id="caja_busqueda"></input>
+
+		
+	</div>
+
+	<div id="datos"></div>
+	
+	
+</section>
+
+
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
+
 </html>

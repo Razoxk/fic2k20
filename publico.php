@@ -9,9 +9,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
     </script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>    
     <link rel="icon" type="image/jpg" href="src/logoblanco.jpg">
-    <title>POSTULACION PRIVADA</title>
+    <title>POSTULACION PÚBLICA</title>
     <style>
       .ctitulo {
         color: white;
@@ -32,6 +32,8 @@
         border-color: #ffffff; border-width: 1px; background-color: #e5e5e5; border-style: solid;
       }
     </style>
+
+
   </head>
 
   <body>
@@ -52,45 +54,94 @@
     <hr align="center" width="75%" noshade="noshade">
     <!-- ITEM 1 -->
     
+    <script>
+    function checkRut(rut) {
+    // Despejar Puntos
+    var valor = rut.value.replace('.','');
+    // Despejar Guión
+    valor = valor.replace('-','');
     
+    // Aislar Cuerpo y Dígito Verificador
+    cuerpo = valor.slice(0,-1);
+    dv = valor.slice(-1).toUpperCase();
+    
+    // Formatear RUN
+    rut.value = cuerpo + '-'+ dv
+    
+    // Si no cumple con el mínimo ej. (n.nnn.nnn)
+    if(cuerpo.length < 7) { rut.setCustomValidity("RUT Incompleto"); return false;}
+    
+    // Calcular Dígito Verificador
+    suma = 0;
+    multiplo = 2;
+    
+    // Para cada dígito del Cuerpo
+    for(i=1;i<=cuerpo.length;i++) {
+    
+        // Obtener su Producto con el Múltiplo Correspondiente
+        index = multiplo * valor.charAt(cuerpo.length - i);
+        
+        // Sumar al Contador General
+        suma = suma + index;
+        
+        // Consolidar Múltiplo dentro del rango [2,7]
+        if(multiplo < 7) { multiplo = multiplo + 1; } else { multiplo = 2; }
+  
+    }
+    
+    // Calcular Dígito Verificador en base al Módulo 11
+    dvEsperado = 11 - (suma % 11);
+    
+    // Casos Especiales (0 y K)
+    dv = (dv == 'K')?10:dv;
+    dv = (dv == 0)?11:dv;
+    
+    // Validar que el Cuerpo coincide con su Dígito Verificador
+    if(dvEsperado != dv) { rut.setCustomValidity("RUT Inválido"); return false; }
+    
+    // Si todo sale bien, eliminar errores (decretar que es válido)
+    rut.setCustomValidity('');
+}
+</script>
       <div class="container">
       <form id="formulario" name="formulario" method="POST" action="php/submit.php" enctype="multipart/form-data" onsubmit="return Comprobar()">
       <div class="container">
         <h4 class="ctitulo2 rounded-lg">1 - Antecedentes Generales</h4>
-        <h4>1.1 Nombre de Proyecto</h4><input type="text" name="nombreProyecto" class="form-control"><br>
-        <h4>1.2 Nombre entidad de postulante</h4><input type="text" name="nombreEntidad" class="form-control"><br>
+        <h4>1.1 Nombre de Proyecto</h4><input type="text" name="nombreProyecto" class="form-control" required maxlength="50"><br>
+        <h4>1.2 Nombre entidad de postulante</h4><input type="text" name="nombreEntidad" class="form-control" required maxlength="40"><br>
         <h4>1.3 Coordinador Responsable del Proyecto</h4>
         <h6 class="alert alert-secondary col-md-8">(Es quien está a cargo de la administración y será el responsable de la
           calidad de ejecución y del fiel cumplimiento de los compromisos contraídos en él.) </h6>
         <table>
           <tbody>
             <tr>
-              <td class="border border-white pl-2" style="background: #E2E3E5;">Rut</td>
-              <td><input type="text" name="rutCoordinador" class="form-control"></td>
+              <td class="border border-white pl-2" style="background: #E2E3E5;"  >Rut</td>
+              <td><input type="text" id="rut" name="rutCoordinador" required oninput="checkRut(this)" placeholder="Ingrese RUT" maxlength="10" class="form-control"></td>
+              
             </tr>
             <tr>
               <td class="border border-white pl-2" style="background: #E2E3E5;">Nombre Completo</td>
-              <td><input type="text" name="nombreCoordinador" class="form-control"></td>
+              <td><input type="text" name="nombreCoordinador" class="form-control"  required maxlength="254"></td>
             </tr>
             <tr>
               <td class="border border-white pl-2" style="background: #E2E3E5;">Cargo Institucion</td>
-              <td><input type="text" name="cargoCoordinador" class="form-control"></td>
+              <td><input type="text" name="cargoCoordinador" class="form-control" required maxlength="254"></td>
             </tr>
             <tr>
               <td class="border border-white pl-2" style="background: #E2E3E5;">Numero de telefono +56</td>
-              <td><input type="text" name="telefonoCoordinador" class="form-control"></td>
+              <td><input type="text" name="telefonoCoordinador" class="form-control" required maxlength="9"></td>
             </tr>
             <tr>
             <td class="border border-white pl-2" style="background: #E2E3E5;">Numero de celular &nbsp;&nbsp;&nbsp;+56</td>
-              <td><input type="text" name="celularCoordinador" class="form-control"></td>
+              <td><input type="text" name="celularCoordinador" class="form-control" required maxlength="9" placeholder="9XXXXXXXX"></td>
             </tr>
             <tr>
               <td class="border border-white pl-2" style="background: #E2E3E5;">Email</td>
-              <td><input type="text" name="emailCoordinador" class="form-control"></td>
+              <td><input type="email" name="emailCoordinador" required maxlength="50" class="form-control" placeholder="Ejemplo: correo@correo.com"></td>
             </tr>
             <tr>
               <td class="border border-white pl-2" style="background: #E2E3E5;">Direccion</td>
-              <td><input type="text" name="direccionCoordinador" class="form-control"></td>
+              <td><input type="text" name="direccionCoordinador" class="form-control" required maxlength="254"></td>
             </tr>
           </tbody>
         </table><br>
@@ -99,31 +150,32 @@
           <tbody>
             <tr>
               <td class="border border-white pl-2" style="background: #E2E3E5;">Rut</td>
-              <td><input type="text" name="rutRepresentante" class="form-control"></td>
+              <td>  <input type="text" id="rut" name="rutRepresentante" required oninput="checkRut(this)" maxlength="10" placeholder="Ingrese RUT" class="form-control"></td>
+            
             </tr>
             <tr>
               <td class="border border-white pl-2" style="background: #E2E3E5;">Nombre Completo</td>
-              <td><input type="text" name="nombreRepresentante" class="form-control"></td>
+              <td><input type="text" name="nombreRepresentante" class="form-control" required maxlength="254"></td>
             </tr>
             <tr>
               <td class="border border-white pl-2" style="background: #E2E3E5;">Cargo Institucion</td>
-              <td><input type="text" name="cargoRepresentante" class="form-control"></td>
+              <td><input type="text" name="cargoRepresentante" class="form-control" required maxlength="254"></td>
             </tr>
             <tr>
               <td class="border border-white pl-2" style="background: #E2E3E5;">Numero de telefono&nbsp;+56</td>
-              <td><input type="text" name="numeroRepresentante" class="form-control"></td>
+              <td><input type="text" name="numeroRepresentante" class="form-control" required maxlength="9" placeholder="9XXXXXXXX"></td>
             </tr>
             <tr>
               <td class="border border-white pl-2" style="background: #E2E3E5;">Numero de celular &nbsp;&nbsp;&nbsp;+56</td>
-              <td><input type="text" name="celularRepresentante" class="form-control"></td>
+              <td><input type="text" name="celularRepresentante" class="form-control" required maxlength="9" placeholder="9XXXXXXX"></td>
             </tr>
             <tr>
               <td class="border border-white pl-2" style="background: #E2E3E5;">Email</td>
-              <td><input type="text" name="emailRepresentante" class="form-control"></td>
+              <td><input type="email" name="emailRepresentante" class="form-control"placeholder="Ejemplo: correo@correo.com" required maxlength="50" ></td>
             </tr>
             <tr>
               <td class="border border-white pl-2" style="background: #E2E3E5;">Direccion</td>
-              <td><input type="text" name="direccionRepresentante" class="form-control"></td>
+              <td><input type="text" name="direccionRepresentante" class="form-control" required maxlength="254"></td>
             </tr>
           </tbody>
         </table>
@@ -146,11 +198,11 @@
 
             <!-- 2.1 -->
 
-            <div class="row container">
+            <div class="row container" >
             <div  class="col-md-3 border-left border-dark" style="background: #E2E3E5;" ></div>
             <div  class="col-md-1 border-left border-dark" style="background: #E2E3E5;" ></div>
             <div  class="col-md-4 border border-dark" style="background: #E2E3E5;" >Tecnificación del riego pequeños productores utilizando ERNC. </div>
-            <div align="center" class="pt-2 col-md-1 border border-dark" style="background: #E2E3E5;"><input type="radio" value="Tecnificación del riego pequeños productores utilizando ERNC" name="options1" id="option1"></div>
+            <div align="center" class="pt-2 col-md-1 border border-dark" style="background: #E2E3E5;"><input type="radio" value="Tecnificación del riego pequeños productores utilizando ERNC" name="options1" id="option1" ></div>
             </div>
             <div class="row container">
             <div  class="col-md-3 border-left border-dark" style="background: #E2E3E5;" ></div>
