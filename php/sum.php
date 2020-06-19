@@ -255,31 +255,34 @@
                 var infra = ingreso6 + ingreso7;
                 try {
 
-                    ingresoDifu = Math.round(parseInt(total) * 0.1);
-                    ingresoGasto = Math.round(parseInt(total) * 0.05);
-                    ingresoInfra = Math.round(parseInt(total) * 0.1);
+                    ingresoDifu =   Math.round(parseInt(total) * 0.1);
+                    ingresoGasto =  Math.round(parseInt(total) * 0.05);
+                    ingresoInfra =  Math.round(parseInt(total) * 0.1);
+                    calc1=          Math.round(parseInt(total)*0.5);
+                    calc2=          Math.round(parseInt(total)*0.5);
                 } catch (e) {}
 
                 if (ingresoDifu < ingreso5) {
                     alert(
-                        "Error. El valor del ítem 'Difusión (10%)' es mayor al tope máximo. Ingrese los datos nuevamente.");
+                        "Error. El valor del ítem 'Difusión (10%)' es menor al tope máximo. Ingrese los datos nuevamente.");
                     document.formulario.ingreso5.value = "";
                     document.getElementById("ingreso5").focus();
                     document.formulario.proy_total.value = "";
                 } else if (ingresoGasto < infra) {
                     alert(
-                        "Error. El valor del ítem 'Gastos de Administración (5%)' es mayor al tope máximo. Ingrese los datos nuevamente.");
+                        "Error. El valor del ítem 'Gastos de Administración (5%)' es menor al tope máximo. Ingrese los datos nuevamente.");
                     document.formulario.ingreso6.value = "";
                     document.formulario.ingreso7.value = "";
                     document.getElementById("ingreso6").focus();
                     document.formulario.proy_total.value = "";
                 } else if (ingresoInfra < ingreso10) {
                     alert(
-                        "Error. El valor del ítem 'Infraestructura (10%)' es mayor al tope máximo. Ingrese los datos nuevamente.");
+                        "Error. El valor del ítem 'Infraestructura (10%)' es menor al tope máximo. Ingrese los datos nuevamente.");
                     document.formulario.ingreso10.value = "";
                     document.getElementById("ingreso10").focus();
                     document.formulario.proy_total.value = "";
                 }
+                
             }
 
             function Pecunario() {
@@ -292,7 +295,7 @@
                     ingresoNoPecunario = Math.round(parseInt(total3) * 0.05);
                 } catch (e) {}
 
-                if (ingresoPecunario > total1) {
+                if (ingresoPecunario < total1) {
                     alert(
                         "Error. El valor total del 'Aporte Pecuniario' debe ser mayor o igual al 5% del Monto Total del Proyecto. Ingrese los datos nuevamente.");
                     document.formulario.ingreso11.value = "";
@@ -307,7 +310,7 @@
                     document.formulario.ingreso110.value = "";
                     document.getElementById("ingreso11").focus();
                     document.formulario.proy_total1.value = "";
-                } else if (ingresoNoPecunario > total2) {
+                } else if (ingresoNoPecunario < total2) {
                     alert(
                         "Error. El valor total del 'Aporte No Pecuniario' debe ser mayor o igual al 5% del Monto Total del Proyecto. Ingrese los datos nuevamente.");
                     document.formulario.ingreso21.value = "";
@@ -411,7 +414,7 @@
                 <tr>
                     <td class="verticalTableHeade r" rowspan="2" align="center"><b>Gastos de Administración (5%)</b>
                     </td>
-                    <td class="tg-hix7">Materiales de Oficina</td>
+                    <td class="tg-hix7">Detallar</td>
                     <th class="tg-hix7"><input type="text" maxlength="9" name="ingreso6" id="ingreso6"
                             onkeyup="return Suma()" onkeypress="return valida(event)" onpaste="return false" required>
                     </th>
@@ -427,7 +430,7 @@
                 </tr>
 
                 <tr>
-                    <td class="tg-hix7">Equipo Administrativo profesionales o técnicos</td>
+                    <td class="tg-hix7"></td>
                     <th class="tg-hix7"><input type="text" maxlength="9" name="ingreso7" id="ingreso7"
                             onkeyup="return Suma()" onkeypress="return valida(event)" onpaste="return false" required>
                     </th>
