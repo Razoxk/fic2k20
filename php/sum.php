@@ -71,7 +71,7 @@
                 var ingreso4 = document.formulario.ingreso4.value;
                 var ingreso5 = document.formulario.ingreso5.value;
                 var ingreso6 = document.formulario.ingreso6.value;
-                var ingreso7 = document.formulario.ingreso7.value;
+                
                 var ingreso8 = document.formulario.ingreso8.value;
                 var ingreso9 = document.formulario.ingreso9.value;
                 var ingreso10 = document.formulario.ingreso10.value;
@@ -83,7 +83,7 @@
                 var ingreso14 = document.formulario.ingreso14.value;
                 var ingreso15 = document.formulario.ingreso15.value;
                 var ingreso16 = document.formulario.ingreso16.value;
-                var ingreso17 = document.formulario.ingreso17.value;
+                
                 var ingreso18 = document.formulario.ingreso18.value;
                 var ingreso19 = document.formulario.ingreso19.value;
                 var ingreso110 = document.formulario.ingreso110.value;
@@ -95,7 +95,7 @@
                 var ingreso24 = document.formulario.ingreso24.value;
                 var ingreso25 = document.formulario.ingreso25.value;
                 var ingreso26 = document.formulario.ingreso26.value;
-                var ingreso27 = document.formulario.ingreso27.value;
+                
                 var ingreso28 = document.formulario.ingreso28.value;
                 var ingreso29 = document.formulario.ingreso29.value;
                 var ingreso210 = document.formulario.ingreso210.value;
@@ -121,7 +121,7 @@
                     ingreso4 = (isNaN(parseInt(ingreso4))) ? 0 : parseInt(ingreso4);
                     ingreso5 = (isNaN(parseInt(ingreso5))) ? 0 : parseInt(ingreso5);
                     ingreso6 = (isNaN(parseInt(ingreso6))) ? 0 : parseInt(ingreso6);
-                    ingreso7 = (isNaN(parseInt(ingreso7))) ? 0 : parseInt(ingreso7);
+                    
                     ingreso8 = (isNaN(parseInt(ingreso8))) ? 0 : parseInt(ingreso8);
                     ingreso9 = (isNaN(parseInt(ingreso9))) ? 0 : parseInt(ingreso9);
                     ingreso10 = (isNaN(parseInt(ingreso10))) ? 0 : parseInt(ingreso10);
@@ -132,7 +132,7 @@
                     ingreso14 = (isNaN(parseInt(ingreso14))) ? 0 : parseInt(ingreso14);
                     ingreso15 = (isNaN(parseInt(ingreso15))) ? 0 : parseInt(ingreso15);
                     ingreso16 = (isNaN(parseInt(ingreso16))) ? 0 : parseInt(ingreso16);
-                    ingreso17 = (isNaN(parseInt(ingreso17))) ? 0 : parseInt(ingreso17);
+                   
                     ingreso18 = (isNaN(parseInt(ingreso18))) ? 0 : parseInt(ingreso18);
                     ingreso19 = (isNaN(parseInt(ingreso19))) ? 0 : parseInt(ingreso19);
                     ingreso110 = (isNaN(parseInt(ingreso110))) ? 0 : parseInt(ingreso110);
@@ -143,7 +143,7 @@
                     ingreso24 = (isNaN(parseInt(ingreso24))) ? 0 : parseInt(ingreso24);
                     ingreso25 = (isNaN(parseInt(ingreso25))) ? 0 : parseInt(ingreso25);
                     ingreso26 = (isNaN(parseInt(ingreso26))) ? 0 : parseInt(ingreso26);
-                    ingreso27 = (isNaN(parseInt(ingreso27))) ? 0 : parseInt(ingreso27);
+                    
                     ingreso28 = (isNaN(parseInt(ingreso28))) ? 0 : parseInt(ingreso28);
                     ingreso29 = (isNaN(parseInt(ingreso29))) ? 0 : parseInt(ingreso29);
                     ingreso210 = (isNaN(parseInt(ingreso210))) ? 0 : parseInt(ingreso210);
@@ -164,28 +164,28 @@
 
 
                 c = parseInt(ingreso1) + parseInt(ingreso2) + parseInt(ingreso3) + parseInt(ingreso4) + parseInt(
-                        ingreso5) + parseInt(ingreso6) + parseInt(ingreso7) + parseInt(ingreso8) + parseInt(ingreso9) +
+                        ingreso5) + parseInt(ingreso6) + parseInt(ingreso8) + parseInt(ingreso9) +
                     parseInt(ingreso10);
                 document.formulario.proy_total.value = c;
 
                 d = parseInt(ingreso11) + parseInt(ingreso12) + parseInt(ingreso13) + parseInt(ingreso14) + parseInt(
-                    ingreso15) + parseInt(ingreso16) + parseInt(ingreso17) + parseInt(ingreso18) + parseInt(
+                    ingreso15) + parseInt(ingreso16) + parseInt(ingreso18) + parseInt(
                     ingreso19) + parseInt(ingreso110);
                 document.formulario.proy_total1.value = d;
 
 
                 e = parseInt(ingreso21) + parseInt(ingreso22) + parseInt(ingreso23) + parseInt(ingreso24) + parseInt(
-                    ingreso25) + parseInt(ingreso26) + parseInt(ingreso27) + parseInt(ingreso28) + parseInt(
+                    ingreso25) + parseInt(ingreso26)  + parseInt(ingreso28) + parseInt(
                     ingreso29) + parseInt(ingreso210);
                 document.formulario.proy_total2.value = e;
 
                 f = parseInt(ingreso1) + parseInt(ingreso2) + parseInt(ingreso3) + parseInt(ingreso4) + parseInt(
-                        ingreso5) + parseInt(ingreso6) + parseInt(ingreso7) + parseInt(ingreso8) + parseInt(ingreso9) +
+                        ingreso5) + parseInt(ingreso6) +  parseInt(ingreso8) + parseInt(ingreso9) +
                     parseInt(ingreso10) + parseInt(ingreso11) + parseInt(ingreso12) + parseInt(ingreso13) + parseInt(
-                        ingreso14) + parseInt(ingreso15) + parseInt(ingreso16) + parseInt(ingreso17) + parseInt(
+                        ingreso14) + parseInt(ingreso15) + parseInt(ingreso16)  + parseInt(
                         ingreso18) + parseInt(ingreso19) + parseInt(ingreso110) + parseInt(ingreso21) + parseInt(
                         ingreso22) + parseInt(ingreso23) + parseInt(ingreso24) + parseInt(ingreso25) + parseInt(
-                        ingreso26) + parseInt(ingreso27) + parseInt(ingreso28) + parseInt(ingreso29) + parseInt(
+                        ingreso26) + parseInt(ingreso28) + parseInt(ingreso29) + parseInt(
                         ingreso210);
                 document.formulario.proy_total3.value = f;
 
@@ -207,8 +207,7 @@
                 l = parseInt(ingreso6) + parseInt(ingreso16) + parseInt(ingreso26);
                 document.formulario.ingreso36.value = l;
 
-                m = parseInt(ingreso7) + parseInt(ingreso17) + parseInt(ingreso27);
-                document.formulario.ingreso37.value = m;
+                
 
                 m = parseInt(ingreso8) + parseInt(ingreso18) + parseInt(ingreso28);
                 document.formulario.ingreso38.value = m;
@@ -230,7 +229,7 @@
                     document.formulario.ingreso4.value = "";
                     document.formulario.ingreso5.value = "";
                     document.formulario.ingreso6.value = "";
-                    document.formulario.ingreso7.value = "";
+                   
                     document.formulario.ingreso8.value = "";
                     document.formulario.ingreso9.value = "";
                     document.formulario.ingreso10.value = "";
@@ -245,14 +244,13 @@
                 var ingreso4 = document.formulario.ingreso4.value;
                 var ingreso5 = document.formulario.ingreso5.value;
                 var ingreso6 = document.formulario.ingreso6.value;
-                var ingreso7 = document.formulario.ingreso7.value;
+               
                 var ingreso8 = document.formulario.ingreso8.value;
                 var ingreso9 = document.formulario.ingreso9.value;
                 var ingreso10 = document.formulario.ingreso10.value;
                 var total = document.formulario.proy_total.value;
                 var ingreso6 = Math.round(ingreso6);
-                var ingreso7 = Math.round(ingreso7);
-                var infra = ingreso6 + ingreso7;
+              
                 try {
 
                     ingresoDifu =   Math.round(parseInt(total) * 0.1);
@@ -272,7 +270,7 @@
                     alert(
                         "Error. El valor del ítem 'Gastos de Administración (5%)' es menor al tope máximo. Ingrese los datos nuevamente.");
                     document.formulario.ingreso6.value = "";
-                    document.formulario.ingreso7.value = "";
+                    
                     document.getElementById("ingreso6").focus();
                     document.formulario.proy_total.value = "";
                 } else if (ingresoInfra < ingreso10) {
@@ -304,7 +302,7 @@
                     document.formulario.ingreso14.value = "";
                     document.formulario.ingreso15.value = "";
                     document.formulario.ingreso16.value = "";
-                    document.formulario.ingreso17.value = "";
+                   
                     document.formulario.ingreso18.value = "";
                     document.formulario.ingreso19.value = "";
                     document.formulario.ingreso110.value = "";
@@ -319,7 +317,7 @@
                     document.formulario.ingreso24.value = "";
                     document.formulario.ingreso25.value = "";
                     document.formulario.ingreso26.value = "";
-                    document.formulario.ingreso27.value = "";
+                    
                     document.formulario.ingreso28.value = "";
                     document.formulario.ingreso29.value = "";
                     document.formulario.ingreso210.value = "";
@@ -431,14 +429,11 @@
 
                 <tr>
                     <td class="tg-hix7"></td>
-                    <th class="tg-hix7"><input type="text" maxlength="9" name="ingreso7" id="ingreso7"
-                            onkeyup="return Suma()" onkeypress="return valida(event)" onpaste="return false" required>
+                    <th class="tg-hix7">
                     </th>
-                    <th class="tg-hix7"><input type="text" maxlength="9" name="ingreso17" id="ingreso17"
-                            onkeyup="return Suma()" onkeypress="return valida(event)" onpaste="return false" required>
+                    <th class="tg-hix7">
                     </th>
-                    <th class="tg-hix7"><input type="text" maxlength="9" name="ingreso27" id="ingreso27"
-                            onkeyup="return Suma()" onkeypress="return valida(event)" onpaste="return false" required>
+                    <th class="tg-hix7">
                     </th>
                     <th class="tg-hix7"><input type="number" maxlength="9" name="ingreso37" id="ingreso37"
                             readonly="readonly" style="background-color:#B2B2B2" onkeypress="return valida(event)"
