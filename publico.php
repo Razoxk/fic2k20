@@ -397,8 +397,13 @@
             <div align="center" class="pt-2 col-md-1 border border-dark" style="background: #E2E3E5;"><input value="Innovación Empresarial" type="radio" name="destino" id="destino"></div>
             </div>
             <div class="row container"> 
+            <div class="col-md-4 border-left  border-dark"></div>
+            <div class="col-md-4 border-left border-top border-dark">2) Innovación Pública</div>
+            <div align="center" class="pt-2 col-md-1 border border-dark" style="background: #E2E3E5;"><input value="Innovación Pública" type="radio" name="destino" id="destino"></div>
+            </div>
+            <div class="row container"> 
             <div class="col-md-4 border-left border-bottom border-dark">b) Innovación</div>
-            <div class="col-md-4 border-left border-top border-dark">2) Innovación Social</div>
+            <div class="col-md-4 border-left border-top border-dark">3) Innovación Social</div>
             <div align="center" class="pt-2 col-md-1 border border-dark" style="background: #E2E3E5;"><input value="Innovación Social" type="radio" name="destino" id="destino"></div>
             </div>
             <div class="row container"> 
@@ -416,7 +421,7 @@
             <div align="center" class="pt-2 col-md-1 border border-dark" style="background: #E2E3E5;"><input value="La formación, inserción y atracción de recursos humanos especializados" type="radio" name="destino" id="destino"></div>
             </div>
             <div class="row container">
-            <div class="col-md-8 border border-dark">f) El fomento de la cultura del emprendimiento y la innovación</div>
+            <div class="col-md-8 border border-dark">e) El fomento de la cultura del emprendimiento y la innovación</div>
             <div align="center" class="pt-2 col-md-1 border border-dark" style="background: #E2E3E5;"><input value="El fomento de la cultura del emprendimiento y la innovación" type="radio" name="destino" id="destino"></div>
             </div>
           
@@ -435,7 +440,7 @@
             ?>
           
 <!--------------------------------------------------------------------------------->             
-            <h1>TABLA</h1>
+          
           
           <!-- ITEM 2 -->
              <!-- ITEM 3 -->
