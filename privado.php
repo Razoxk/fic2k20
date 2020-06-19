@@ -41,7 +41,7 @@
       <tr bgcolor="#006CB7" class="header">
         <td width="130"><a href="index.php"><img src="src/logoblanco.jpg" width="150" height="150" /></a></td>
         <td colspan="3" valign="middle" class="ctitulo">
-          <h2>Formulario Postulaci&oacuten FIC - Institución Pública</h2>
+          <h2>Formulario Postulaci&oacuten FIC - Institución Privada</h2>
           <h3>Divisi&oacuten de Fomento e Industria<br>Gobierno Regional de O'Higgins</h3>
         </td>
         <td width="15%" align="right" valign="bottom">
@@ -377,6 +377,22 @@
 
 
           <!-- 3.1 -->
+
+
+
+          <!--3.2-->
+            <div class="row container">
+              <div class="col-md-3 border-left border-bottom border-rigth border-dark" style="background: #E2E3E5;">3.2 Inducción para la colaboración, la asociatividad y la innovación abierta</div>
+              <div align="center" class="pt-2 col-md-1 border border-dark" style="background: #E2E3E5;"><input value=" Inducción para la colaboración, la asociatividad y la innovación abierta" type="radio" name="options1" id="options1"></div>
+              <div class="col-md-4 border-left border-bottom border-dark" style="background: #E2E3E5;">Todas las iniciativas postuladas deben considerar acciones de colaboración entre los actores del sistema regional de innovación e innovación abierta.</div>
+              <div align="center" class="pt-2 col-md-1 border border-dark" style="background: #E2E3E5;"><input value=" Todas las iniciativas postuladas deben considerar acciones de colaboración entre los actores del sistema regional de innovación e innovación abierta." type="radio" name="options1" id="options1"></div>
+            </div>
+          <!--3.2-->
+
+
+
+
+
           
 <!--------------------------------------------------------------------------------->
             <h4 class="pt-5">2.2 Destino del Proyecto</h4>
@@ -435,7 +451,7 @@
             ?>
           
 <!--------------------------------------------------------------------------------->             
-            <h1>TABLA</h1>
+            
           
           <!-- ITEM 2 -->
              <!-- ITEM 3 -->
@@ -584,17 +600,17 @@
         </tr>
         <tr>
           <td class="archivo1" width="80%">Bases del Concurso</td>
-          <td class="archivo1" width="10%"><a href="https://www.dellibertador.cl/diplan/2019/fic/res_exe_0615_aprueba_bases_fic.pdf" target="_blank">Descargar </a></td>
+          <td class="archivo1" width="10%"><a href="https://www.dellibertador.cl/diplan/2019/fic/res_exe_0615_aprueba_bases_fic.pdf" target="_blank">Ver </a></td>
           <td class="archivo1"></td>
         </tr>
         <tr>
           <td class="archivo1">Anexo 2 - Carta de Declaración de Responsabilidad</td>
-          <td class="archivo1"><a href="bajaranexo2.php" target="_blank">Descargar</a></td>
+          <td class="archivo1"><a href="src/anexos/anexo_2.docx" target="_blank">Descargar</a></td>
           <td class="archivo1"><input required="" type="file" name="archivo1" id="archivo1"></td>
         </tr>
         <tr>
           <td class="archivo1">Anexo 3 - Formatos de Cartas</td>
-          <td class="archivo1"><a href="bajaranexo3.php" target="_blank">Descargar</a></td>
+          <td class="archivo1"><a href="src/anexos/anexo_3.docx" target="_blank">Descargar</a></td>
           <td class="archivo1"><input required="" type="file" name="archivo2" id="archivo2" multiple="multiple"></td>
         </tr>
         <tr>
@@ -604,17 +620,17 @@
         </tr>
         <tr>
           <td class="archivo1">Anexo 6 - Formato de Carta Compromiso Costos de Operación Post Proyecto</td>
-          <td class="archivo1"><a href="bajaranexo6.php" target="_blank">Descargar</a></td>
+          <td class="archivo1"><a href="src/anexos/anexo_6.docx" target="_blank">Descargar</a></td>
           <td class="archivo1"><input required="" type="file" name="archivo5" id="archivo5"></td>
         </tr>
         <tr>
           <td class="archivo1">Presupuesto detallado del proyecto</td>
-          <td class="archivo1"><a href="bajarpresu.php" target="_blank">Descargar</a></td>
+          <td class="archivo1"><a href="src/anexos/presupuesto.xlsx" target="_blank">Descargar</a></td>
           <td class="archivo1"><input required="" type="file" name="archivo6" id="archivo6"></td>
         </tr>
         <tr>
           <td class="archivo1">Función de cada integrante del proyecto y horas dedicadas</td>
-          <td class="archivo1"><a href="bajar415.php" target="_blank">Descargar</a></td>
+          <td class="archivo1"><a href="src/anexos/integrantes.xlsx" target="_blank">Descargar</a></td>
           <td class="archivo1"><input required="" type="file" name="archivo10" id="archivo10"></td>
         </tr>
         <tr>
@@ -643,9 +659,9 @@
           <td class="archivo1"><input type="file" name="archivo15" id="archivo15"></td>
         </tr>
         <tr>
-          <td class="archivo1">Presentación de las bases del concurso 2019</td>
-          <td class="archivo1"><a href="bajarbases.php" target="_blank">Descargar</a></td>
+          <td class="archivo1">Copia simple de certificado de vigencia de la personaría jurídica</td>
           <td class="archivo1"></td>
+          <td class="archivo1"><input type="file" name="archivo16" id="archivo16"></td>
         </tr>
         </tbody>
         </table> <br><br><br><br><br>

@@ -589,12 +589,12 @@
         </tr>
         <tr>
           <td class="archivo1">Anexo 2 - Carta de Declaración de Responsabilidad</td>
-          <td class="archivo1"><a href="bajaranexo2.php" target="_blank">Descargar</a></td>
+          <td class="archivo1"><a href="src/anexos/anexo_2.docx" target="_blank">Descargar</a></td>
           <td class="archivo1"><input required="" type="file" name="archivo1" id="archivo1"></td>
         </tr>
         <tr>
           <td class="archivo1">Anexo 3 - Formatos de Cartas</td>
-          <td class="archivo1"><a href="bajaranexo3.php" target="_blank">Descargar</a></td>
+          <td class="archivo1"><a href="src/anexos/anexo_3.docx" target="_blank">Descargar</a></td>
           <td class="archivo1"><input required="" type="file" name="archivo2" id="archivo2" multiple="multiple"></td>
         </tr>
         <tr>
@@ -604,17 +604,17 @@
         </tr>
         <tr>
           <td class="archivo1">Anexo 6 - Formato de Carta Compromiso Costos de Operación Post Proyecto</td>
-          <td class="archivo1"><a href="bajaranexo6.php" target="_blank">Descargar</a></td>
+          <td class="archivo1"><a href="src/anexos/anexo_6.docx" target="_blank">Descargar</a></td>
           <td class="archivo1"><input required="" type="file" name="archivo5" id="archivo5"></td>
         </tr>
         <tr>
           <td class="archivo1">Presupuesto detallado del proyecto</td>
-          <td class="archivo1"><a href="bajarpresu.php" target="_blank">Descargar</a></td>
+          <td class="archivo1"><a href="src/anexos/presupuesto.xlsx" target="_blank">Descargar</a></td>
           <td class="archivo1"><input required="" type="file" name="archivo6" id="archivo6"></td>
         </tr>
         <tr>
           <td class="archivo1">Función de cada integrante del proyecto y horas dedicadas</td>
-          <td class="archivo1"><a href="bajar415.php" target="_blank">Descargar</a></td>
+          <td class="archivo1"><a href="src/anexos/integrantes.xlsx" target="_blank">Descargar</a></td>
           <td class="archivo1"><input required="" type="file" name="archivo10" id="archivo10"></td>
         </tr>
         <tr>
@@ -641,11 +641,6 @@
           <td class="archivo1"><u>Opcional</u> - Incorporar adicionalmente antecedentes relevantes de la iniciativa, que sea necesario agregar para su evaluación y análisis. <b>No agregar: CV completo</b></td>
           <td class="archivo1"></td>
           <td class="archivo1"><input type="file" name="archivo15" id="archivo15"></td>
-        </tr>
-        <tr>
-          <td class="archivo1">Presentación de las bases del concurso 2019</td>
-          <td class="archivo1"><a href="bajarbases.php" target="_blank">Descargar</a></td>
-          <td class="archivo1"></td>
         </tr>
         </tbody>
         </table> <br><br><br><br><br>
