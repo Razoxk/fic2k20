@@ -128,7 +128,7 @@ foreach ($conn->query($sqlNew) as $row){
         <select name="update">
             <option 1 value="<?php echo $nombreEstado;?>">Seleccione el estado del proyecto</option>
             <option 2 value="Aprobado">Aprobado</option>
-            <option 3 value="Aprobado">Pendiente</option>
+            <option 3 value="Pendiente">Pendiente</option>
             <option 4 value="Rechazado">Rechazado</option>
         </select></p>
         <button class="btn btn-primary" type="submit" value="Actualizar">Aplicar</button>

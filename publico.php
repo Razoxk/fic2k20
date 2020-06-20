@@ -677,12 +677,7 @@ if(isset($_POST['Enviar']))
   include 'php/submit.php';
 
   echo "WORK!";
-
-
 } 
-
-
-
 ?>      
 
 </div>
